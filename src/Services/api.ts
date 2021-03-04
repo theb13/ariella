@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { Posts } from '../helpers/types';
-// import {  UserRegister } from '../types';
 
 export const api = axios.create({
-    baseURL: "https://theb.co.mz/wp/",
+  baseURL: process.env.REACT_APP_API_URL
 });
 export const getPosts = () =>
   new Promise((resolve, reject) => {
