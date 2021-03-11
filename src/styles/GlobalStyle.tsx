@@ -24,7 +24,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     button::-moz-focus-inner { border: 0; }
     
-    
+    .flex-item {
+	    flex: 1;
+    }
 
     @media only screen and (max-width: 700px) {
         }

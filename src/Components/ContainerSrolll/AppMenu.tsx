@@ -42,7 +42,7 @@ function SimpleTabs() {
                 <Link to='/'  onClick={()=>(handleChange(1))} >
                     <Tab label="AriellaStudio" {...a11yProps(1)} />
                 </Link>
-                <Link to='/'  onClick={()=>(handleChange(2))} >
+                <Link to='/contact'  onClick={()=>(handleChange(2))} >
                     <Tab label="Contacto" {...a11yProps(2)} />
                 </Link>
                 <Link to='/blog'  onClick={()=>(handleChange(3))} >
@@ -65,14 +65,9 @@ const AppMenu: React.FC = () => {
 
         <Row justifyContent='space-between'>
             <div>
-                <h1>AriellaBoats</h1>
+                <h1 style={{'color':'#FFF'}}>AriellaBoats</h1>
             </div>
             <Row>
-                {/* <li>Início</li>
-                <li>AriellaStudio</li>
-                <li>Contacto</li>
-                <li>Notícias</li>
-                <li>Sobre nós</li> */}
                 {SimpleTabs()}
             </Row>
         </Row>

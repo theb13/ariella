@@ -1,16 +1,14 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import AppMenu from './AppMenu';
+import Footer from './Footer';
 
 interface Props {
   window?: () => Window;
@@ -26,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     appBar: {
       backgroundColor: '#000',
-      padding:10,
+      padding: 10,
       // marginBottom:20,
     }
   }),
@@ -66,12 +64,13 @@ function BackToTop(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar className={classes.appBar}>
-        <AppMenu/>
+        <AppMenu />
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <div>
-       {props.children}
+        {props.children}
       </div>
+      <Footer />
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
@@ -86,7 +85,7 @@ function BackToTop(props: Props) {
 // import { Container } from './styles';
 
 const ContainerSrolll: React.FC<Props> = (props) => {
-  return <BackToTop {...props}/>;
+  return <BackToTop {...props} />;
 }
 
 export default ContainerSrolll;

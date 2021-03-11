@@ -9,7 +9,8 @@ interface Props {
   color?: string;
   fontSize?: string;
   fontWeight?: string;
-  flexWrap?: string;
+  flexWrap?: boolean;
+  background?: boolean;
 }
 
 export const Separator = styled.div`
@@ -51,7 +52,7 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: ${(props: Props) => props.justifyContent || 'flex-start'};
   align-items: ${(props: Props) => props.alignItems || 'center'};
-  flex-wrap: ${(props: Props) => props.flexWrap || 'nowrap'};
+  flex-wrap: ${({flexWrap}: Props) => flexWrap? 'wrap' : 'nowrap'};
 `;
 
 export const Column = styled.div`
@@ -61,3 +62,8 @@ export const Column = styled.div`
   align-items: ${(props: Props) => props.alignItems || 'stretch'};
 `;
 
+export const Padding = styled.div`
+    padding:40px;
+    margin:20px 0px;
+    background: ${({background}: Props) => background? '#F8F8F8' : '#fff'};
+`;

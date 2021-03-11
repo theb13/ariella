@@ -1,18 +1,26 @@
-import { Container } from '@material-ui/core';
 import React from 'react';
-import Overview from './Overview';
+import OurPartners from '../../common/OurPartners';
+import OurServices from '../../common/OurServices';
+import OurTeam from '../../common/OurTeam';
+import Overview from '../../common/Overview';
+import { Padding } from '../../styles';
 import SliderShow from './SliderShow';
 
-import { Container as Classic } from './styles';
+import { Container  } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <Classic>
+    <Container>
       <SliderShow />
-      <Container>
+      <Padding>
         <Overview />
-      </Container>
-    </Classic>
+      </Padding>
+      <Padding background>
+        <OurServices />
+      </Padding>
+      <OurTeam/>
+      <OurPartners/>
+    </Container>
   );
 };
 
