@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@material-ui/core'
 import { Title } from '../../styles';
-
+import Img from '../../assets/img/banner2.png';
 
 
 function Item(props: any) {
@@ -24,6 +24,11 @@ function Item(props: any) {
 
 const SliderShow: React.FC = () => {
     let items = [
+        {
+            img:Img ,
+            name: "ARIELLA BOATS & SERVICES S.A.",
+            description: "É uma das poucas firmas moçambicanas que conta com uma excelente equipa de profissionais focalizada em áreas de desenvolvimento organizacional e assistência técnica especializada."
+        },
         {
             img: 'https://demo.themeansar.com/consultup/transparent/wp-content/uploads/2019/03/slide9.jpg',
             name: "ARIELLA BOATS & SERVICES S.A.",

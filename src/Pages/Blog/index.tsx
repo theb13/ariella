@@ -2,19 +2,26 @@ import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import Loader from '../../Components/Loader';
 import PostCard from '../../Components/PostCard';
-import { Post, Posts } from '../../helpers/types';
+import { Post,  PropsModalBLog } from '../../helpers/types';
 import { getPosts } from '../../Services/api';
 import { Row } from '../../styles';
+import ModalView from './ModalView';
 
 import { Container } from './styles';
 
 const Blog: React.FC = () => {
-  const resumeDescription = (text: string) => {
-    return text.slice(0, 200) + '...';
-  };
+  const [open, setOpen] = React.useState(false);
+  const [modalData, setModalData] = React.useState<PropsModalBLog>();
+  
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   const [offset, setOffset] = useState<number>(1);
+  
+  const handleOpen = (item:PropsModalBLog) => {
+    setModalData(item)
+    setOpen(true);
+  };
+
 
   useEffect(() => {
     setLoading(true);
@@ -38,8 +45,9 @@ const Blog: React.FC = () => {
       return (
         <PostCard key={post.date + post.id}
           title={post.title.rendered}
-          img='http'
-          text={resumeDescription(post.content.rendered)}
+          img={post.jetpack_featured_media_url}
+          handleOpen={handleOpen}
+          body={post.content.rendered}
         />
       )
     })
@@ -67,7 +75,11 @@ const Blog: React.FC = () => {
           :
           null
       }
-
+      {
+        modalData?.title 
+        ?(<ModalView open={open} setOpen={setOpen} modalData={modalData}/> )
+        :(null)
+      }
     </Container>
   );
 };

@@ -2,15 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+import SearchIcon from '@material-ui/icons/Search';
 import CameraEnhanceOutlinedIcon from '@material-ui/icons/CameraEnhanceOutlined';
-
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 const useStyles = makeStyles({
   root: {
     width: 400,
@@ -77,9 +77,9 @@ const ServicesCard: React.FC<Props> = ({ title, icon, text }) => {
 
     switch (val) {
       case 1: return (<ChatOutlinedIcon className='changeColor' style={{ fontSize: 80 }} />);
-      case 2: return (<ChatOutlinedIcon className='changeColor' style={{ fontSize: 80 }} />);
+      case 2: return (<SearchIcon className='changeColor' style={{ fontSize: 80 }} />);
       case 3: return (<CameraEnhanceOutlinedIcon className='changeColor' style={{ fontSize: 80 }} />);
-      case 4: return (<ChatOutlinedIcon className='changeColor' style={{ fontSize: 80 }} />);
+      case 4: return (<SupervisorAccountIcon className='changeColor' style={{ fontSize: 80 }} />);
     }
   }
 

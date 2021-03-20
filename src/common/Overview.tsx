@@ -29,14 +29,14 @@ const StyledDiv = styled.div`
 
 const Overview: React.FC = () => {
     return (
-        <Column>
+        <Column >
             <Row justifyContent='center' >
                 <Title fontSize="2.2rem">{`ARIELLA BOATS & SERVICES S.A.`}</Title>
             </Row>
             <Row  >
                 <Column>
                     <Title fontSize='2rem'>Visão geral da empresa</Title>
-                    <Text>É uma das poucas firmas moçambicanas que
+                    <Text>A ARIELLA BOATS é uma das poucas firmas moçambicanas que
                     conta com uma excelente equipa de profissionais
                     focalizada em áreas de desenvolvimento
                     organizacional e assistência técnica especializada

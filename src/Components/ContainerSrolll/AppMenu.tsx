@@ -39,7 +39,7 @@ function SimpleTabs() {
                 <Link to='/' onClick={()=>(handleChange(0))} >
                     <Tab label="Início" {...a11yProps(0)} />
                 </Link>
-                <Link to='/'  onClick={()=>(handleChange(1))} >
+                <Link to='/ariellaStudio'  onClick={()=>(handleChange(1))} >
                     <Tab label="AriellaStudio" {...a11yProps(1)} />
                 </Link>
                 <Link to='/contact'  onClick={()=>(handleChange(2))} >
