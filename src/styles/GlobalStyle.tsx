@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration:none;
         font-family:'Nunito',sans-serif;
         list-style-type: none;
+        /* overflow-x: hidden; */
     }
     a{
       color:#fff;
@@ -28,7 +29,9 @@ export const GlobalStyle = createGlobalStyle`
 	    flex: 1;
     }
 
-    @media only screen and (max-width: 700px) {
+    @media (max-width: 768px){
+        .hiddenMobile{
+            display:none;
         }
-
+    }
 `;

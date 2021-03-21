@@ -103,9 +103,6 @@ const ServicesCard: React.FC<Props> = ({ title, icon, text }) => {
           />
         </CardContent>
       </CardActionArea>
-      {/* <CardActions>
-        
-      </CardActions> */}
     </StyledCard>
   );
 };

@@ -10,19 +10,27 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import { Link } from 'react-router-dom';
+import { Title } from "../../styles";
 
 const useStyles = makeStyles({
   list: {
-    width: 250
+    width: 250,
+    backgroundColor:'#424242',
+    height: '100%'
   },
-  fullList: {
-    width: "auto"
-  }
+
 });
 
-export default function TemporaryDrawer() {
+
+interface Props {
+
+  right: boolean
+  setRight: any
+}
+
+const MenuMobile: React.FC<Props> = ({ right, setRight }) => {
   const classes = useStyles();
-  const [right, setRight] = React.useState<boolean>(false);
 
   const toggleDrawer = (open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
@@ -40,43 +48,47 @@ export default function TemporaryDrawer() {
 
   const list = () => (
     <div
+    style={{}}
       className={clsx(classes.list)}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <Link to='/'  >
+          <ListItem button  >Início</ListItem>
+        </Link>
+        <Link to='/ariellaStudio'  >
+          <ListItem button>AriellaStudio</ListItem>
+        </Link>
+        <Link to='/contact'  >
+          <ListItem button>Contacto</ListItem>
+        </Link>
+        <Link to='/blog'  >
+          <ListItem button>Notícias</ListItem>
+        </Link>
+        <Link to='/about' >
+          <ListItem button>
+          <ListItemText primary=" Sobre nós" />
+           </ListItem>
+        </Link>
+
+        
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
+          </div>
   );
 
   return (
     <div>
       <React.Fragment>
-        <Button onClick={toggleDrawer(true)}>right</Button>
-        <Drawer open={right} onClose={toggleDrawer(false)}>
+        {/* <Button onClick={toggleDrawer(true)}>right</Button> */}
+        <Drawer  open={right} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
       </React.Fragment>
     </div>
   );
 }
+
+export default MenuMobile;

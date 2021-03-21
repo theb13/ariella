@@ -1,18 +1,17 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { Column, Title, Text, Row } from '../../styles';
+import { Column, Title, Row, StyledCard } from '../../styles';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 
-import { Container, StyledCard } from './styles';
+import { Container } from './styles';
 import { OurTeamProps, ourTeamData as info } from './data'
-import { Button, Paper } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import ModalView from './ModalView';
 
 const useStyles = makeStyles({

@@ -45,7 +45,7 @@ const Overview: React.FC = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod voluptate harum unde. Sed aliquid iure est repellendus. Fugit beatae magnam sapiente facere amet, neque accusamus reprehenderit perspiciatis similique explicabo.
                 </Text>
                 </Column>
-                <StyledDiv className="overview-img">
+                <StyledDiv className="overview-img hiddenMobile">
                     <Img src={Logo} alt="" />
                 </StyledDiv>
             </Row>

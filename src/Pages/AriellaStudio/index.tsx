@@ -1,5 +1,5 @@
-import { Image } from '@material-ui/icons';
 import React from 'react';
+import BannerStudio from '../../Components/BannerStudio';
 import ImageGridList from './ImageGridList';
 import Overview from './Overview';
 
@@ -8,10 +8,11 @@ import Overview from './Overview';
 const AriellaStudio: React.FC = () => {
   return (
     <>
-        <ImageGridList/>
+      <BannerStudio />
+      <ImageGridList />
 
     </>
-    );
+  );
 }
 
 export default AriellaStudio;

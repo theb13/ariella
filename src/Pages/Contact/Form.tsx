@@ -74,7 +74,7 @@ const Form: React.FC = () => {
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quo facere ex, iusto sapiente pariatur similique quasi veniam alias culpa magni obcaecati commodi recusandae dolores sunt, nemo numquam consectetur quibusdam.
      </Text>
 
-      <Row justifyContent='center' alignItems='start'>
+      <Row justifyContent='center' alignItems='start' flexWrap>
         <Column className='width'>
           <Card >
             <LocationOnIcon style={{color:'#164B94'}}/>
