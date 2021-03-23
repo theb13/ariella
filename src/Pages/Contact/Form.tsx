@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
-import { Container } from './styles';
-import { Column, Row, Text, Title } from '../../styles';
+import React from "react"
+import styled from "styled-components"
+import LocationOnIcon from "@material-ui/icons/LocationOn"
+import EmailIcon from "@material-ui/icons/Email"
+import PhoneForwardedIcon from "@material-ui/icons/PhoneForwarded"
+import { Container } from "./styles"
+import { Column, Row, Text, Title } from "../../styles"
 
 
 const Input = styled.input`
@@ -65,81 +65,81 @@ const Card = styled.div`
 
 
 const Form: React.FC = () => {
-  return (<>
-    <Container>
-      <Row>
-        <Title>Contacte-nos</Title>
-      </Row>
-      <Text>
+	return (<>
+		<Container>
+			<Row>
+				<Title>Contacte-nos</Title>
+			</Row>
+			<Text>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quo facere ex, iusto sapiente pariatur similique quasi veniam alias culpa magni obcaecati commodi recusandae dolores sunt, nemo numquam consectetur quibusdam.
-     </Text>
+			</Text>
 
-      <Row justifyContent='center' alignItems='start' flexWrap>
-        <Column className='width'>
-          <Card >
-            <LocationOnIcon style={{color:'#164B94'}}/>
-            <div className="body">
-              <h5>Endereço</h5>
-              <Text>
+			<Row justifyContent='center' alignItems='start' flexWrap>
+				<Column className='width'>
+					<Card >
+						<LocationOnIcon style={{color:"#164B94"}}/>
+						<div className="body">
+							<h5>Endereço</h5>
+							<Text>
                 Av. Agostinho Neto nº 1528 R/C,
                 esquina com Olof Palme.
-                <br/>
+								<br/>
                 Maputo – Moçambique.
-            </Text>
-            </div>
-          </Card>
+							</Text>
+						</div>
+					</Card>
 
-          <Card >
-            <PhoneForwardedIcon style={{color:'#164B94'}}/>
-            <div className="body">
-              <h5>Telefone</h5>
-              <Text>
+					<Card >
+						<PhoneForwardedIcon style={{color:"#164B94"}}/>
+						<div className="body">
+							<h5>Telefone</h5>
+							<Text>
                 +258 87 7745 372
-                <br/>
+								<br/>
                 +258 84 237 6204
-                <br/>
+								<br/>
                 +258 84 237 5841
-                <br/>
+								<br/>
                 +258 82 094 12 88
-              </Text>
-            </div>
-          </Card>
+							</Text>
+						</div>
+					</Card>
 
-          <Card >
-            <EmailIcon style={{color:'#164B94'}}/>
-            <div className="body">
-              <h5>Email</h5>
-              <Text>
+					<Card >
+						<EmailIcon style={{color:"#164B94"}}/>
+						<div className="body">
+							<h5>Email</h5>
+							<Text>
                 info@ariellaboats.com
-                <br/>
+								<br/>
                 apoio@ariellaboats.com
-                <br/>
+								<br/>
                 ariellaboats@gmail.com
-              </Text>
+							</Text>
 
-            </div>
-          </Card>
+						</div>
+					</Card>
 
-        </Column>
+				</Column>
 
-        <Column className='width'>
-          <form action="">
-            <h3>Enviar mensagem</h3>
-            <Input type="text" required placeholder='Nome Completo' />
-            <Input type="email" required placeholder='Email' />
-            <Input type="text" required placeholder='Contacto' />
-            <Input type="assunto" required placeholder='Assunto' />
-            <Textarea name="" required placeholder='Mensagem' ></Textarea>
-            {/* <Row className='flex-end'> <Button> Enviar</Button></Row> */}
-          </form>
-        </Column>
+				<Column className='width'>
+					<form action="">
+						<h3>Enviar mensagem</h3>
+						<Input type="text" required placeholder='Nome Completo' />
+						<Input type="email" required placeholder='Email' />
+						<Input type="text" required placeholder='Contacto' />
+						<Input type="assunto" required placeholder='Assunto' />
+						<Textarea name="" required placeholder='Mensagem' ></Textarea>
+						{/* <Row className='flex-end'> <Button> Enviar</Button></Row> */}
+					</form>
+				</Column>
 
-      </Row>
+			</Row>
 
-    </Container>
+		</Container>
 
-  </>
-  );
-};
+	</>
+	)
+}
 
-export default Form;
+export default Form

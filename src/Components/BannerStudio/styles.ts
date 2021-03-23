@@ -1,5 +1,4 @@
-import { Card } from '@material-ui/core';
-import styled from 'styled-components';
+import styled from "styled-components"
 
 interface Props{
     img: string;
@@ -13,7 +12,7 @@ export const Container = styled.div`
    background-size: cover;
    height:100vh;
     
-`;
+`
 
 
 export const MediaMenu = styled.div`

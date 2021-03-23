@@ -15,7 +15,7 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
     "google-map-react": "^2.1.9",
-    "react": "^17.0.1",
+    "react": "^17.0.2",
     "react-dom": "^17.0.1",
     "react-material-ui-carousel": "^2.2.1",
     "react-messenger-customer-chat": "^0.8.0",
@@ -51,6 +51,10 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "@types/styled-components": "^5.1.7"
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.22.0"
   }
 }

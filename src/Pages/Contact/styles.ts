@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -17,4 +17,4 @@ export const Container = styled.div`
         max-width:600px;
         margin:0 20px;
     }
-`;
+`
