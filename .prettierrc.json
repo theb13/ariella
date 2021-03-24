@@ -3,5 +3,5 @@
     "singleQuote": false,
     "tabWidth": 4,
     "useTabs": false,
-    "endOfLine": "crlf"
+    "endOfLine": "cr"
 }
