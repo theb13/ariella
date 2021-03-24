@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
       margin:0;
     }
     button::-moz-focus-inner { border: 0; }
-    
+
     .flex-item {
 	    flex: 1;
     }

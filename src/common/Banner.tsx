@@ -1,4 +1,5 @@
 import React from "react"
+// eslint-disable-next-line import/no-extraneous-dependencies
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import Drawer from "@material-ui/core/Drawer"
@@ -12,71 +13,73 @@ import InboxIcon from "@material-ui/icons/MoveToInbox"
 import MailIcon from "@material-ui/icons/Mail"
 
 const useStyles = makeStyles({
-	list: {
-		width: 250
-	},
-	fullList: {
-		width: "auto"
-	}
+    list: {
+        width: 250,
+    },
+    fullList: {
+        width: "auto",
+    },
 })
 
 export default function TemporaryDrawer() {
-	const classes = useStyles()
-	const [right, setRight] = React.useState<boolean>(false)
+    const classes = useStyles()
+    const [right, setRight] = React.useState<boolean>(false)
 
-	const toggleDrawer = (open: boolean) => (
-		event: React.KeyboardEvent | React.MouseEvent
-	) => {
-		if (
-			event.type === "keydown" &&
-      ((event as React.KeyboardEvent).key === "Tab" ||
-        (event as React.KeyboardEvent).key === "Shift")
-		) {
-			return
-		}
+    const toggleDrawer = (open: boolean) => (
+        event: React.KeyboardEvent | React.MouseEvent
+    ) => {
+        if (
+            event.type === "keydown" &&
+            ((event as React.KeyboardEvent).key === "Tab" ||
+                (event as React.KeyboardEvent).key === "Shift")
+        ) {
+            return
+        }
 
-		setRight(open)
-	}
+        setRight(open)
+    }
 
-	const list = () => (
-		<div
-			className={clsx(classes.list)}
-			role="presentation"
-			onClick={toggleDrawer(false)}
-			onKeyDown={toggleDrawer(false)}
-		>
-			<List>
-				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-			<Divider />
-			<List>
-				{["All mail", "Trash", "Spam"].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List>
-		</div>
-	)
+    const list = () => (
+        <div
+            className={clsx(classes.list)}
+            role="presentation"
+            onClick={toggleDrawer(false)}
+            onKeyDown={toggleDrawer(false)}
+        >
+            <List>
+                {["Inbox", "Starred", "Send email", "Drafts"].map(
+                    (text, index) => (
+                        <ListItem button key={text}>
+                            <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItem>
+                    )
+                )}
+            </List>
+            <Divider />
+            <List>
+                {["All mail", "Trash", "Spam"].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>
+                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+        </div>
+    )
 
-	return (
-		<div>
-			<React.Fragment>
-				<Button onClick={toggleDrawer(true)}>right</Button>
-				<Drawer open={right} onClose={toggleDrawer(false)}>
-					{list()}
-				</Drawer>
-			</React.Fragment>
-		</div>
-	)
+    return (
+        <div>
+            <>
+                <Button onClick={toggleDrawer(true)}>right</Button>
+                <Drawer open={right} onClose={toggleDrawer(false)}>
+                    {list()}
+                </Drawer>
+            </>
+        </div>
+    )
 }

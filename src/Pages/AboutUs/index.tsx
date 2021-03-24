@@ -7,18 +7,17 @@ import OurMission from "./OurMission"
 import { Container } from "./styles"
 
 const AboutUs: React.FC = () => {
-	return (
-		<Container>
-			<Padding>
-				<Overview />
-			</Padding >
-			<Padding background>
-				<OurMission />
-			</Padding>
-			<OurTeam />
-
-		</Container>
-	)
+    return (
+        <Container>
+            <Padding>
+                <Overview />
+            </Padding>
+            <Padding background>
+                <OurMission />
+            </Padding>
+            <OurTeam />
+        </Container>
+    )
 }
 
 export default AboutUs

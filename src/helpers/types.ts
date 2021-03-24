@@ -1,11 +1,11 @@
 export interface Post {
-    author: string;
+    author: string
     // categories: [1]
-    comment_status: string;
-    content: { rendered: string, protected: boolean }
-    date: string;
-    date_gmt: string;
-    excerpt: { rendered: string, protected: boolean }
+    comment_status: string
+    content: { rendered: string; protected: boolean }
+    date: string
+    date_gmt: string
+    excerpt: { rendered: string; protected: boolean }
     // featured_media: 0
     // format: "standard"
     // guid: { rendered: "https://theb.co.mz/wp/?p=9" }
@@ -17,7 +17,7 @@ export interface Post {
     // ping_status: "open"
     slug: string
     status: string
-    jetpack_featured_media_url: string,
+    jetpack_featured_media_url: string
     template: ""
     title: { rendered: string }
     type: string
@@ -26,8 +26,6 @@ export interface Post {
 export interface Posts {
     posts: Post[]
 }
-
-
 
 export interface PropsModalBLog {
     title: string

@@ -5,19 +5,19 @@ import GridListTile from "@material-ui/core/GridListTile"
 import { tileData } from "./tileData"
 
 const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			display: "flex",
-			flexWrap: "wrap",
-			justifyContent: "space-around",
-			overflow: "hidden",
-			backgroundColor: theme.palette.background.paper,
-		},
-		gridList: {
-			// width: 500,
-			height: "100%",
-		},
-	}),
+    createStyles({
+        root: {
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+            overflow: "hidden",
+            backgroundColor: theme.palette.background.paper,
+        },
+        gridList: {
+            // width: 500,
+            height: "100%",
+        },
+    })
 )
 
 /**
@@ -39,17 +39,17 @@ const useStyles = makeStyles((theme: Theme) =>
  * ];
  */
 export default function ImageGridList() {
-	const classes = useStyles()
+    const classes = useStyles()
 
-	return (
-		<div className={classes.root}>
-			<GridList cellHeight={350} className={classes.gridList} cols={3}>
-				{tileData.map((tile: any) => (
-					<GridListTile key={tile.img} cols={tile.cols || 1}>
-						<img src={tile.img} alt={tile.title} />
-					</GridListTile>
-				))}
-			</GridList>
-		</div>
-	)
+    return (
+        <div className={classes.root}>
+            <GridList cellHeight={350} className={classes.gridList} cols={3}>
+                {tileData.map((tile: any) => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                        <img src={tile.img} alt={tile.title} />
+                    </GridListTile>
+                ))}
+            </GridList>
+        </div>
+    )
 }
