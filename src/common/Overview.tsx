@@ -3,8 +3,10 @@ import { Column, Row, Title, Text } from "../styles"
 import Logo from "../assets/img/logo.png"
 import styled from "styled-components"
 const Img = styled.img`
-    width:300px;
+    width:310px;
     border-radius: 20px;
+    box-shadow: 1px 1px 2px #164B94;
+
 `
 const StyledDiv = styled.div`
     position :relative;
@@ -13,14 +15,14 @@ const StyledDiv = styled.div`
     z-index:2;
     ::before{
         z-index:-1;
-        top:20px;
-        left:20px;
+        top:5px;
+        left:5px;
         position:absolute;
         content:'';
-        width: 100%;
+        width: 90%;
         height: 100%;
         background:#164B94;
-        border-bottom-right-radius: 20px;
+        border-radius: 20px;
         /* border-radius: 20px; */
         
     }

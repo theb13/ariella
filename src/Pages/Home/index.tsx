@@ -14,13 +14,13 @@ const Home: React.FC = () => {
 		<Container>
 			{/* <SliderShow /> */}
 			<Banner />
-			<Padding >
+			<Padding background>
 				<Overview />
 			</Padding>
+			<OurTeam />
 			<Padding background>
 				<OurServices />
 			</Padding>
-			<OurTeam />
 			<OurPartners />
 		</Container>
 	)

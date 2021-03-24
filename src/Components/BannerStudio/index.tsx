@@ -7,23 +7,24 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Container as ContainerUI } from "@material-ui/core"
 
 import { Container } from "./styles"
-import { Button, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core"
+import {  CardActionArea, CardContent, CardMedia } from "@material-ui/core"
+
 const useStyles = makeStyles({
 	root: {
 		width: 200,
 		Height: 200,
-		backgroundColor: "#9B9897",
+		backgroundColor: "#FFF",
 		margin:20,
 	},
 	media: {
-		height: 150,
+		height: 180,
 		overflow: "hidden"
 	},
 
 })
 
 
-function createCards() {
+function createCards( text: string) {
 	const classes = useStyles()
 	return (
 		<StyledCard className={classes.root}>
@@ -34,18 +35,12 @@ function createCards() {
 					<img src={Logo} alt="" width="200" />
 				</CardMedia>
 				<CardContent className='card-content'>
-					<Typography gutterBottom variant="h5"
-						component="h3"
-					>
-						{/* {data.name} */}
-					</Typography>
+					<Text>
+						{text}
+					</Text>
 				</CardContent>
 			</CardActionArea>
-			<CardActions>
-				<Button size="small" color="primary">
-					Saber mais...
-				</Button>
-			</CardActions>
+			
 		</StyledCard>
 	)
 }
@@ -65,10 +60,10 @@ const BannerStudio: React.FC = () => {
 					</Row>
 				</ContainerUI>
 				<Row justifyContent='center'>
-					{createCards()}
-					{createCards()}
-					{createCards()}
-					{createCards()}
+					{createCards("Casamentos")}
+					{createCards("Eventos socias")}
+					{createCards("Fotos pessoais")}
+					{/* {createCards("Eventos sociass")} */}
 				</Row>
 			</Column>
 		</Container>
