@@ -1,13 +1,13 @@
 import React from "react"
 import Carousel from "react-material-ui-carousel"
-import { Paper, Button } from "@material-ui/core"
-import { Title } from "../../styles"
+import { Paper } from "@material-ui/core"
 import Img from "../../assets/img/banner2.png"
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Item(props: any) {
     return (
         <Paper>
-            <img src={props.item.img} className="slide-img" />
+            {/* <img src={props.item.img} className="slide-img" /> */}
             {/* <div className="float">
                 <h2>{props.item.name}</h2>
                 <p>{props.item.description}</p>
@@ -45,7 +45,7 @@ const SliderShow: React.FC = () => {
     return (
         <Carousel className="slide" animation="slide">
             {items.map((item, i) => (
-                <Item key={i} item={item} />
+                <Item key={`${i + Math.random() * 1000}`} item={item} />
             ))}
         </Carousel>
     )

@@ -57,8 +57,6 @@ interface Props {
 const ModalView: React.FC<Props> = ({ open, setOpen, modalData }: Props) => {
     const classes = useStyles()
 
-    console.log(modalData)
-
     const handleClose = () => {
         setOpen(false)
     }

@@ -29,8 +29,9 @@ const Blog: React.FC = () => {
                 const data = values.concat(posts)
                 setPosts(data)
             })
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             .catch((err) => {
-                console.log(err)
+                // console.log(err)
             })
             .finally(() => {
                 setLoading(false)
