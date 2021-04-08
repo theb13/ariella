@@ -2,6 +2,5 @@
     "semi": false,
     "singleQuote": false,
     "tabWidth": 4,
-    "useTabs": false,
-    "endOfLine": "cr"
+    "useTabs": false
 }

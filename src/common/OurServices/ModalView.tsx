@@ -3,8 +3,7 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles"
 import Modal from "@material-ui/core/Modal"
 import Backdrop from "@material-ui/core/Backdrop"
 import Fade from "@material-ui/core/Fade"
-import Avatar from "@material-ui/core/Avatar"
-import { OurTeamProps } from "./data"
+import { OurServicesProps } from "./data"
 import { Column, Row, Text, Title } from "../../styles"
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -33,12 +32,11 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     open: boolean
     setOpen: any
-    person: OurTeamProps
+    service: OurServicesProps
 }
 
-const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
+const ModalView: React.FC<Props> = ({ open, setOpen, service }: Props) => {
     const classes = useStyles()
-
     const handleClose = () => {
         setOpen(false)
     }
@@ -58,14 +56,15 @@ const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
         >
             <Fade in={open}>
                 <Row className={classes.paper} flexWrap>
-                    <Avatar
+                    {/* <Avatar
                         alt="Remy Sharp"
-                        src={person.img}
+                        src={}
                         className={classes.size}
-                    />
+                    /> */}
+                    {service.icon}
                     <Column style={{ margin: "0 20px" }}>
-                        <Title>{person.name}</Title>
-                        <Text>{person.text}</Text>
+                        <Title>{service.title}</Title>
+                        <Text>{service.text}</Text>
                     </Column>
                 </Row>
             </Fade>
