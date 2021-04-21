@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration:none;
         font-family:'Nunito','Source Sans Pro', sans-serif;
         list-style-type: none;
-        overflow-x:hidden;
+
     }
     a{
       color:#fff;
