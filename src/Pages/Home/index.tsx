@@ -12,9 +12,8 @@ import { Container } from "./styles"
 const Home: React.FC = () => {
     return (
         <Container>
-            {/* <SliderShow /> */}
             <Banner />
-            <Padding background>
+            <Padding id="view" background>
                 <Overview />
             </Padding>
             <Padding>

@@ -76,6 +76,7 @@ const Blog: React.FC = () => {
             return (
                 <div key={id}>
                     <ReactPlayer
+                        controls
                         style={{
                             maxWidth: "300px",
                             maxHeight: "200px",

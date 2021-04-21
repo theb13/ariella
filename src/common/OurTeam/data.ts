@@ -3,6 +3,9 @@ import Abdala from "../../assets/img_our_team/Abdala.jpg"
 import Amina from "../../assets/img_our_team/Amina.jpg"
 import Stelio from "../../assets/img_our_team/Stelio.jpg"
 import Herminia from "../../assets/img_our_team/Herminia.jpg"
+import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
+import Bernardo from "../../assets/img_our_team/Bernardo.jpg"
+import Dalton from "../../assets/img_our_team/Dalton.jpg"
 
 export interface OurTeamProps {
     id: number
@@ -26,7 +29,7 @@ export const ourTeamData = [
         Escola de Jornalismo onde formau se em Jornalismo e, de seguida fez Direito na Universidade Eduardo Mondlane. É
         casado e pai de 4 filhos. Seu maior sonho é tornar Ariella uma empresa de referência na assitência técnica à
         empresas e organizações de sociedade civil.`,
-        img: Logo,
+        img: Arsenio,
     },
     {
         id: 2,
@@ -98,7 +101,7 @@ export const ourTeamData = [
         office: "Programador Full-Stack",
         text:
             "É Programador Full-Stack da Ariella Boats & Services S.A. Como fruto da sua dedicação em estudos intensivos e em trabalhos no regime freelancer, Bernardo tem experiência em desenvolvimento de aplicativos mobile e web. É formado em Sistemas de Informação pelo Instituto de Transportes e Comunicações (ITC) e, actualmente, o jovem apaixonado pela tecnologia e programação caminha a passos largos para a conclusão da sua Licenciatura em Engenharia Informática, no Instituto Superior de Ciências e Tecnologia de Moçambique. A paixão pela “tech” faz com que o maior sonho de Bernardo Júnior seja levar a tecnologia à porta de todos.",
-        img: Logo,
+        img: Bernardo,
     },
     {
         id: 8,
@@ -118,7 +121,7 @@ export const ourTeamData = [
         text: `Voluntário da Ariella Boats & Service, desde Fevereiro de 2021, desempenhando a função de oficial de marketing digital. Trabalha com o mundo digital desde 2016, altura em que fundou a Revista Biografia, a primeira do género em Moçambique. É, ainda, webdesigner, e, explorando sua capacidade de criar e de inovar, fundou o site evangelístico Chave de Davi, em 2018; e a loja online O Ardina Digital, em 2020.
         É, desde 2020, licenciado em jornalismo, pela Universidade Eduardo Mondlane (UEM), e é jornalista de profissão desde 2013, sendo, actualmente, editor executivo da Revista ÍDOLO, e correspondente da Revista Macau, órgão de comunicação baseado em Macau, na China. Por meio do seu amor pelas soluções digitais, redacção jornalística, e experiência nos dois ramos, espera impactar empresas e organizações da sociedade civil através da demonstração digital das soluções que a Ariella oferece.
         `,
-        img: Logo,
+        img: Dalton,
     },
     {
         id: 10,

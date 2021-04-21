@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Posts } from "../helpers/types"
+import { Medias, Posts } from "../helpers/types"
 
 const api = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
@@ -31,10 +31,19 @@ export const getYoutubeVideos = () =>
                 reject(err)
             })
     })
-// const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}`)
-// const data = await res.json()
-// return {
-//     props: {
-//         data,
-//     },
-// }
+
+export const getMedia = (author: number, offset: number) => {
+    let url = `wp-json/wp/v2/media?author=${author}&per_page=10&page=${offset}`
+    if (author === 0) {
+        url = `wp-json/wp/v2/media?author_exclude=2,3&per_page=10&page=${offset}`
+    }
+    return new Promise((resolve, reject) => {
+        api.get(url)
+            .then((response) => {
+                resolve(response.data as Medias)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
+}

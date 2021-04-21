@@ -3,6 +3,8 @@ import styled from "styled-components"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
 import EmailIcon from "@material-ui/icons/Email"
 import PhoneForwardedIcon from "@material-ui/icons/PhoneForwarded"
+import { Button } from "@material-ui/core"
+import Icon from "@material-ui/core/Icon"
 import { Container } from "./styles"
 import { Column, Row, Text, Title } from "../../styles"
 
@@ -60,14 +62,21 @@ const Form: React.FC = () => {
     return (
         <>
             <Container>
+                <Row style={{ marginTop: 30 }}>
+                    <Title fontSize="2rem">Contacte-nos</Title>
+                </Row>
                 <Row>
-                    <Title>Contacte-nos</Title>
+                    <Title fontSize="1.2rem">
+                        Tem alguma duvida ou questão?
+                    </Title>
                 </Row>
                 <Text>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dolorem quo facere ex, iusto sapiente pariatur similique
-                    quasi veniam alias culpa magni obcaecati commodi recusandae
-                    dolores sunt, nemo numquam consectetur quibusdam.
+                    Tem duas opções. Pode preencher o formulário abaixo e em
+                    menos de 24 horas a nossa equipa irá responder. Mas se
+                    preferir resposta em tempo real, no horário normal de
+                    expediente, pode entrar em contacto connosco ligando para um
+                    dos números ou vir aos nossos escritórios seguindo o
+                    endereço físico partilhado abaixo.
                 </Text>
 
                 <Row justifyContent="center" alignItems="start" flexWrap>
@@ -136,7 +145,15 @@ const Form: React.FC = () => {
                                 placeholder="Assunto"
                             />
                             <Textarea name="" required placeholder="Mensagem" />
-                            {/* <Row className='flex-end'> <Button> Enviar</Button></Row> */}
+                            <Row justifyContent="flex-end">
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    endIcon={<Icon>send</Icon>}
+                                >
+                                    Enviar
+                                </Button>
+                            </Row>
                         </form>
                     </Column>
                 </Row>

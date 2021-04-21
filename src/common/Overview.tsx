@@ -31,16 +31,19 @@ const Overview: React.FC = () => {
     return (
         <Column>
             <Row justifyContent="center">
-                <Title fontSize="2.2rem">ARIELLA BOATS & SERVICES S.A.</Title>
+                <span />
+                <Title fontSize="2rem">ARIELLA BOATS & SERVICES S.A.</Title>
             </Row>
             <Row justifyContent="center">
                 <Column style={{ maxWidth: "600px" }}>
-                    <Title fontSize="2rem">Visão geral da empresa</Title>
+                    <Title fontSize="1.8rem">Visão geral da empresa</Title>
                     <Text>
-                        A ARIELLA BOATS é uma das poucas firmas moçambicanas que
-                        conta com uma excelente equipa de profissionais
-                        focalizada em áreas de desenvolvimento organizacional e
-                        assistência técnica especializada.
+                        Somos uma empresa moçambicana que se dedica na prestação
+                        de serviços e consultorias ligadas ao desenvolvimento
+                        organizacional. O fim último de toda nossa acção é
+                        tornar a sua empresa ou organização uma referência no
+                        que diz respeito a qualidade organizacional na sua área
+                        de actuação no mercado.
                     </Text>
                     {/* <Text>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod voluptate harum unde. Sed aliquid iure est repellendus. Fugit beatae magnam sapiente facere amet, neque accusamus reprehenderit perspiciatis similique explicabo.

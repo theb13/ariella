@@ -31,10 +31,8 @@ const OurMission: React.FC = () => {
                 <Title>Missão</Title>
                 <div className=" about-content">
                     <Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vitae nisi sapiente ea illum itaque porro consequatur,
-                        tempora sed assumenda nobis molestiae quis? Optio
-                        distinctio soluta quasi quia atque illum natus.
+                        Prestar serviços e consultorias ligadas ao
+                        desenvolvimento organizacional
                     </Text>
                 </div>
             </ColumnRf>
@@ -59,10 +57,9 @@ const OurMission: React.FC = () => {
                 <Title>Visão</Title>
                 <div className="about-content">
                     <Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vitae nisi sapiente ea illum itaque porro consequatur,
-                        tempora sed assumenda nobis molestiae quis? Optio
-                        distinctio soluta quasi quia atque illum natus.
+                        Levar empresas e organizações à altos níveis de
+                        qualidade organizacional no serviço, que se propôs a
+                        oferecer ao público.
                     </Text>
                 </div>
             </ColumnRf>
@@ -86,10 +83,9 @@ const OurMission: React.FC = () => {
                 </svg>
                 <Title>Valores</Title>
                 <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vitae nisi sapiente ea illum itaque porro consequatur,
-                    tempora sed assumenda nobis molestiae quis? Optio distinctio
-                    soluta quasi quia atque illum natus.
+                    Qualidade, boa reputação, excelência, verdade, honestidade,
+                    simplicidade, vida, justiça, transparência, e
+                    profissionalismo.
                 </Text>
             </ColumnRf>
         </Row>

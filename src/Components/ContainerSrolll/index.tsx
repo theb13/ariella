@@ -1,6 +1,5 @@
 /* eslint-disable react/destructuring-assignment */
 import React from "react"
-// import MessengerCustomerChat from 'react-messenger-customer-chat';
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles"
@@ -74,15 +73,7 @@ function BackToTop(props: Props) {
                 <AppMenu />
             </AppBar>
             <Toolbar id="back-to-top-anchor" />
-            <div>
-                {props.children}
-                {/* <MessengerCustomerChat
-          pageId={process.env.REACT_APP_PAGE_ID}
-          appId={process.env.REACT_APP_APP_ID}
-          language="pt_PT"
-          themeColor="#ffff00"
-        /> */}
-            </div>
+            <div>{props.children}</div>
             <Footer />
             <ScrollTop {...props}>
                 <Fab

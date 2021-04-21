@@ -6,7 +6,7 @@ import { Column, Row, Text, Title } from "../../styles"
 
 const HotInfo: React.FC = () => {
     return (
-        <Row justifyContent="center" alignItems="start">
+        <Row justifyContent="center" alignItems="start" flexWrap>
             <ReactPlayer
                 style={{
                     maxWidth: "300px",

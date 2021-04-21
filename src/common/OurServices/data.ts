@@ -45,3 +45,23 @@ export const ourServicesData = [
         icon: 6,
     },
 ] as OurServicesProps[]
+
+export const ourServicesStudioData = [
+    {
+        title: "Photoshoot",
+        text: `Aprecia aqui o nosso portefólio mais recente de sessões fotográficas [photoShoots].
+        Para fazer photoshoots connosco é só ligar e agendar
+        `,
+        icon: 3,
+    },
+    {
+        title: "Acompanhamento de Eventos socias",
+        text: `Aprecia aqui o nosso portefólio mais recente de material publicitário. Para produzir sua publicidade connosco é só ligar e solicitar.`,
+        icon: 5,
+    },
+    {
+        title: "Produção de publicidade",
+        text: `A Ariella Studio faz cobertura de eventos desde conferências; reuniões; festas; e muito mais. Aprecia aqui o nosso portefólio mais recente de eventos que cobrimos. `,
+        icon: 6,
+    },
+] as OurServicesProps[]

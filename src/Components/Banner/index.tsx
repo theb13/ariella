@@ -1,34 +1,23 @@
 import React from "react"
-
-import { Link } from "react-router-dom"
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import { BannerSection } from "./styles"
-import { Title } from "../../styles"
+import { Row, Title } from "../../styles"
 
 const Banner: React.FC = () => {
     return (
         <BannerSection>
-            <div className="banner-box">
-                <div className="title-container">
-                    <Title color="#111" fontSize="3rem">
-                        AriellaBoats
-                    </Title>
-                    <Title color="#fff" fontSize="3rem">
-                        AriellaStudio
-                    </Title>
-                </div>
-                <div className="title-container">
-                    <Link to="/abour">
-                        <button type="button">info</button>
-                    </Link>
-                    <Link to="/ariellaStudio">
-                        <button type="button">info</button>
-                    </Link>
-                </div>
-            </div>
+            <Row justifyContent="flex-end" className="row-title">
+                <Title className="banner-title" color="#fff" fontSize="2rem">
+                    Olá,
+                    <br />
+                    Bem Vindo a <br />
+                    Nossa Pagina
+                </Title>
+            </Row>
 
             <div className="diag-bg" />
             <span className="animated arrowDown">
-                {/* <BsChevronDoubleDown size={46} /> */}
+                <KeyboardArrowDownIcon style={{ fontSize: 56 }} />
             </span>
         </BannerSection>
     )

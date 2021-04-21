@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     margin-bottom: 30px;
     h2 {
-        margin: 20px;
+        /* margin-top: 20px; */
     }
     p:first-of-type {
         width: 80%;

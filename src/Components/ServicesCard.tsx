@@ -139,12 +139,7 @@ const ServicesCard: React.FC<Props> = ({
                 </CardMedia>
                 <CardContent>
                     <Title color="#111">{title}</Title>
-                    <Text
-                        fontFamily
-                        fontWeight="300"
-                        color="#000"
-                        // fontSize="0.9rem"
-                    >
+                    <Text fontFamily fontWeight="300" color="#000">
                         {resumeDescription(text)}
                     </Text>
                 </CardContent>

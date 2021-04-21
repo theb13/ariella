@@ -63,7 +63,7 @@ const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
                         src={person.img}
                         className={classes.size}
                     />
-                    <Column style={{ margin: "0 20px" }}>
+                    <Column style={{ margin: "0 20px", maxWidth: 600 }}>
                         <Title>{person.name}</Title>
                         <Text>{person.text}</Text>
                     </Column>

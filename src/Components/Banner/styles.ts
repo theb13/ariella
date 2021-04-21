@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Logo from "../../assets/img/logoCombo.jpeg"
 
 export const Container = styled.div``
 
@@ -12,26 +13,16 @@ export const BannerSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .banner-box {
-        width: 90%;
-        .title-container {
-            display: flex;
-            flex-direction: column;
-            > :nth-child(2) {
-                align-self: flex-end;
-            }
-        }
-        h1 {
-            font-size: 3rem;
-        }
+    .row-title {
+        position: absolute;
+        top: 15%;
+        right: 5%;
     }
 
     .diag-bg {
         width: 100vw;
         height: 100vh;
-        -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
-        clip-path: polygon(0 0, 100% 100%, 100% 0);
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
         background: linear-gradient(to right, #164b54, #164b94);
         position: absolute;
         top: 0;
@@ -47,12 +38,22 @@ export const BannerSection = styled.section`
         background-color: #f50057;
         position: absolute;
         left: 0;
-        bottom: 25%;
+        bottom: 20%;
     }
-
+    ::before {
+        content: "";
+        background: url(${Logo}) no-repeat left center;
+        background-size: 60vw;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .arrowDown {
         position: absolute;
-        bottom: 75px;
+        bottom: 5%;
     }
     .animated {
         -webkit-animation-duration: 0.5s;
@@ -85,5 +86,16 @@ export const BannerSection = styled.section`
     .arrowDown {
         -webkit-animation-name: bounce;
         animation-name: bounce;
+    }
+
+    @media (max-width: 769px) {
+        height: 50vh;
+        .diag-bg {
+            width: 100%;
+            height: 100%;
+        }
+        .banner-title {
+            font-size: 1.1rem;
+        }
     }
 `

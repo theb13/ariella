@@ -31,3 +31,14 @@ export interface PropsModalBLog {
     title: string
     body: string
 }
+
+export interface Media {
+    id: number
+    author: string
+    guid: { rendered: string }
+    title: { rendered: string }
+}
+
+export interface Medias {
+    medias: Media[]
+}

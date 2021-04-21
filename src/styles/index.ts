@@ -33,7 +33,7 @@ export const Text = styled.p`
     color: ${(props: Props) => props.color || "#5c8599"};
     font-weight: ${(props: Props) => props.fontWeight || "400"};
     font-family: ${({ fontFamily }: Props) =>
-        fontFamily ? "Source Sans Pro" : ""};
+        fontFamily ? "Source Sans Pro" : "Nunito"};
 `
 
 export const Input = styled.input`
