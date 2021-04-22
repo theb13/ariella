@@ -26,7 +26,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     button::-moz-focus-inner { border: 0; }
 
-
+    .fb_customer_chat_icon{
+        bottom: 70px !important;
+        right: 0px !important;
+    }
     @media (max-width: 768px){
         .hiddenMobile{
             display:none;

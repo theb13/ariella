@@ -15,7 +15,7 @@ const HotInfo: React.FC = () => {
                 }}
                 url="https://www.youtube.com/watch?v=2qYvFxvyvKY"
             />
-            <Column style={{ maxWidth: "400px" }}>
+            <Column style={{ maxWidth: "400px", marginTop: "20px" }}>
                 <Title fontSize="1.2rem">
                     Precisa de um parceiro para realização de conferências
                     online?
