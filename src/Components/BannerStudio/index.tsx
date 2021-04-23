@@ -44,7 +44,14 @@ const BannerStudio: React.FC = () => {
                                 Marque a tua sessão! e conte-nos a tua história
                             </Title>
                             <a href="tel:+255877745372">
-                                <Title fontSize="1.1rem">877745372</Title>
+                                <Title fontSize="1.1rem">
+                                    (+258) 87 774 5372
+                                </Title>
+                            </a>
+                            <a href="tel:+255842376204">
+                                <Title fontSize="1.1rem">
+                                    (+258) 84 237 6204
+                                </Title>
                             </a>
                         </Column>
                         <img src={Logo} alt="" width="300" />

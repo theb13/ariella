@@ -26,9 +26,11 @@ export const GlobalStyle = createGlobalStyle`
     }
     button::-moz-focus-inner { border: 0; }
 
-    .fb_customer_chat_icon{
-        bottom: 66px !important;
-        right: 0px !important;
+    .fb_dialog_content{
+        iframe:first-of-type{
+            bottom: 66px !important;
+            right: 0px !important;
+        }
     }
     @media (max-width: 768px){
         .hiddenMobile{

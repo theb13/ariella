@@ -10,8 +10,6 @@ import Loader from "../../Components/Loader"
 import { getMedia } from "../../Services/api"
 import Overview from "./Overview"
 
-// import { Container } from './styles';
-
 const SingleViewMedia: React.FC = () => {
     const { id } = useParams() as any
     const [data, setData] = useState<any>()
