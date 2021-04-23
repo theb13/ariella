@@ -34,6 +34,7 @@ const StyledRow = styled(Row)`
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    padding: 50px 40px;
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -43,9 +44,19 @@ const StyledRow = styled(Row)`
             margin: 10px 0;
         }
     }
+    a {
+        color: #111;
+    }
     img {
-        width: 300px;
-        height: 250px;
+        max-width: 98%;
+    }
+    .wp-caption.alignnone {
+        width: 100% !important;
+    }
+    @media (max-width: 720px) {
+        img {
+            max-height: 350px !important;
+        }
     }
 `
 interface Props {

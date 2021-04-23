@@ -23,7 +23,12 @@ const StyledDiv = styled.div`
         height: 100%;
         background: #164b94;
         border-radius: 20px;
-        /* border-radius: 20px; */
+    }
+    @media (max-width: 720px) {
+        width: 250px;
+        img {
+            width: 250px;
+        }
     }
 `
 interface Props {

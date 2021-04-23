@@ -6,6 +6,7 @@ import Herminia from "../../assets/img_our_team/Herminia.jpg"
 import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
 import Bernardo from "../../assets/img_our_team/Bernardo.jpg"
 import Dalton from "../../assets/img_our_team/Dalton.jpg"
+import Jen from "../../assets/img_our_team/Jennifer.jpg"
 
 export interface OurTeamProps {
     id: number
@@ -53,7 +54,7 @@ export const ourTeamData = [
         de Desporto e Health Prefect. Participou em campeonatos de football, netball, volleyball e xadrez. Seu maior sonho
         é se tornar numa empresária independente e fortalecer as crianças e mulheres vulneráveis à violência em
         Moçambique bem como contribuir para que Ariella Boats & S.A cresça e seja reconhecida.`,
-        img: Logo,
+        img: Jen,
     },
     {
         id: 4,

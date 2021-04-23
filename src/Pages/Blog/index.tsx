@@ -59,9 +59,9 @@ const Blog: React.FC = () => {
         return posts.map((post: Post) => {
             return (
                 <PostCard
-                    key={post.date + post.id}
+                    key={`${post.date}-${Math.random() * 30}`}
                     title={post.title.rendered}
-                    img={post.jetpack_featured_media_url}
+                    img={post.featured_media_src_url}
                     handleOpen={handleOpen}
                     body={post.content.rendered}
                 />
@@ -72,7 +72,6 @@ const Blog: React.FC = () => {
         if (playList.length < 1) return null
         return playList.map(({ id, snippet }: any) => {
             const { resourceId = {} } = snippet
-            // const { medium } = thumbnails
             return (
                 <div key={id}>
                     <ReactPlayer

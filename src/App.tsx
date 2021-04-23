@@ -18,7 +18,7 @@ function App() {
                     pageId={process.env.REACT_APP_FACEBOOK_PAGE_ID}
                     appId={process.env.REACT_APP_FACEBOOK_APP_ID}
                     language="pt_PT"
-                    themeColor="#ffff00"
+                    themeColor="#124D9E"
                 />
             </div>
         </BrowserRouter>

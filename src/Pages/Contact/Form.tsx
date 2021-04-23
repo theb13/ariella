@@ -102,7 +102,7 @@ const Form: React.FC = () => {
                             <PhoneForwardedIcon style={{ color: "#164B94" }} />
                             <div className="body">
                                 <h5>Telefone</h5>
-                                <a href="tel:+255877745372">+258 87 774 5372</a>
+                                <a href="tel:+255877901373">+258 87 790 1373</a>
                                 <br />
                                 <a href="tel:+255842376204">+258 84 237 6204</a>
                                 <br />

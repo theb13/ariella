@@ -7,8 +7,6 @@ export interface Post {
     date_gmt: string
     excerpt: { rendered: string; protected: boolean }
     // featured_media: 0
-    // format: "standard"
-    // guid: { rendered: "https://theb.co.mz/wp/?p=9" }
     id: number
     // link: "https://theb.co.mz/wp/seco/"
     // meta: []
@@ -17,7 +15,7 @@ export interface Post {
     // ping_status: "open"
     slug: string
     status: string
-    jetpack_featured_media_url: string
+    featured_media_src_url: string
     template: ""
     title: { rendered: string }
     type: string
