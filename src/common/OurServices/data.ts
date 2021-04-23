@@ -1,7 +1,13 @@
+import Casamento from "../../assets/img_ariella_studio/casamento.jpg"
+import Mel from "../../assets/img_ariella_studio/mel.jpg"
+import Namoro from "../../assets/img_ariella_studio/namoro.jpg"
+
 export interface OurServicesProps {
+    id: string
     title: string
     text: string
     icon: any
+    img: string
 }
 
 export const ourServicesData = [
@@ -48,20 +54,26 @@ export const ourServicesData = [
 
 export const ourServicesStudioData = [
     {
+        id: "Photoshoot",
         title: "Photoshoot",
         text: `Aprecia aqui o nosso portefólio mais recente de sessões fotográficas [photoShoots].
         Para fazer photoshoots connosco é só ligar e agendar
         `,
         icon: 3,
+        img: Mel,
     },
     {
+        id: "Eventos socias",
         title: "Acompanhamento de Eventos socias",
         text: `Aprecia aqui o nosso portefólio mais recente de material publicitário. Para produzir sua publicidade connosco é só ligar e solicitar.`,
         icon: 5,
+        img: Casamento,
     },
     {
+        id: "Publicidade",
         title: "Produção de publicidade",
         text: `A Ariella Studio faz cobertura de eventos desde conferências; reuniões; festas; e muito mais. Aprecia aqui o nosso portefólio mais recente de eventos que cobrimos. `,
         icon: 6,
+        img: Namoro,
     },
 ] as OurServicesProps[]

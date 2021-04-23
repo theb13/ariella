@@ -9,7 +9,6 @@ import ListItem from "@material-ui/core/ListItem"
 // import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import { Link } from "react-router-dom"
-// import { Title } from "../../styles"
 
 const useStyles = makeStyles({
     list: {
@@ -52,16 +51,24 @@ const MenuMobile: React.FC<Props> = ({ right, setRight }) => {
         >
             <List>
                 <Link to="/">
-                    <ListItem button>Início</ListItem>
+                    <ListItem button>
+                        <ListItemText primary=" Início" />
+                    </ListItem>
                 </Link>
                 <Link to="/ariellaStudio">
-                    <ListItem button>AriellaStudio</ListItem>
+                    <ListItem button>
+                        <ListItemText primary=" AriellaStudio" />
+                    </ListItem>
                 </Link>
                 <Link to="/contact">
-                    <ListItem button>Contacto</ListItem>
+                    <ListItem button>
+                        <ListItemText primary=" Contacto" />
+                    </ListItem>
                 </Link>
                 <Link to="/blog">
-                    <ListItem button>Notícias</ListItem>
+                    <ListItem button>
+                        <ListItemText primary=" Notícias" />
+                    </ListItem>
                 </Link>
                 <Link to="/about">
                     <ListItem button>
@@ -76,7 +83,6 @@ const MenuMobile: React.FC<Props> = ({ right, setRight }) => {
     return (
         <div>
             <>
-                {/* <Button onClick={toggleDrawer(true)}>right</Button> */}
                 <Drawer open={right} onClose={toggleDrawer(false)}>
                     {list()}
                 </Drawer>

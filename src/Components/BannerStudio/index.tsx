@@ -2,24 +2,28 @@ import React from "react"
 import { Container as ContainerUI } from "@material-ui/core"
 import { Link } from "react-router-dom"
 import Logo from "../../assets/img/logoStudio.png"
-import Casamento from "../../assets/img_ariella_studio/casamento.jpg"
-import Mel from "../../assets/img_ariella_studio/mel.jpg"
-import Namoro from "../../assets/img_ariella_studio/namoro.jpg"
+
 import { Column, Row, Title, Text } from "../../styles"
 
 import { Card, Container } from "./styles"
+import {
+    OurServicesProps,
+    ourServicesStudioData,
+} from "../../common/OurServices/data"
 
-function createCards(text: string, Img: string, id: string) {
-    return (
-        <Link to={id}>
-            <Card>
-                <img src={Img} alt="" width="200" />
-                <div className="img-description">
-                    <Text color="#ccc">{text}</Text>
-                </div>
-            </Card>
-        </Link>
-    )
+function createCards() {
+    return ourServicesStudioData.map((data: OurServicesProps) => {
+        return (
+            <Link to={`${data.id}`}>
+                <Card>
+                    <img src={data.img} alt="" width="200" />
+                    <div className="img-description">
+                        <Text color="#ccc">{data.id}</Text>
+                    </div>
+                </Card>
+            </Link>
+        )
+    })
 }
 
 const BannerStudio: React.FC = () => {
@@ -47,9 +51,7 @@ const BannerStudio: React.FC = () => {
                     </Row>
                 </ContainerUI>
                 <Row justifyContent="center" flexWrap>
-                    {createCards("Publicidades", Casamento, "publicidade")}
-                    {createCards("Photoshoots", Mel, "photoshoot")}
-                    {createCards("Eventos socias", Namoro, "eventos")}
+                    {createCards()}
                 </Row>
             </Column>
         </Container>

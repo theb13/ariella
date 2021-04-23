@@ -55,6 +55,10 @@ const Card = styled.div`
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
+        a {
+            color: #5c8599;
+            font-weight: 400;
+        }
     }
 `
 
@@ -98,15 +102,14 @@ const Form: React.FC = () => {
                             <PhoneForwardedIcon style={{ color: "#164B94" }} />
                             <div className="body">
                                 <h5>Telefone</h5>
-                                <Text>
-                                    +258 87 7745 372
-                                    <br />
-                                    +258 84 237 6204
-                                    <br />
-                                    +258 84 237 5841
-                                    <br />
-                                    +258 82 094 12 88
-                                </Text>
+                                <a href="tel:+255877745372">+258 87 774 5372</a>
+                                <br />
+                                <a href="tel:+255842376204">+258 84 237 6204</a>
+                                <br />
+                                <a href="tel:+255820941288">+258 82 094 1288</a>
+                                <br />
+
+                                <br />
                             </div>
                         </Card>
 
@@ -114,13 +117,19 @@ const Form: React.FC = () => {
                             <EmailIcon style={{ color: "#164B94" }} />
                             <div className="body">
                                 <h5>Email</h5>
-                                <Text>
+                                <a href="mailto:info@ariellaboats.com">
                                     info@ariellaboats.com
-                                    <br />
+                                </a>
+                                <br />
+                                <a href="mailto:apoio@ariellaboats.com">
                                     apoio@ariellaboats.com
-                                    <br />
+                                </a>
+                                <br />
+                                <a href="mailto:ariellaboats@gmail.com">
                                     ariellaboats@gmail.com
-                                </Text>
+                                </a>
+                                <br />
+                                <br />
                             </div>
                         </Card>
                     </Column>

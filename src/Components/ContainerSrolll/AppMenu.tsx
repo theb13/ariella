@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 
 import MenuIcon from "@material-ui/icons/Menu"
 
-// import { makeStyles, Theme } from "@material-ui/core/styles"
 import Tabs from "@material-ui/core/Tabs"
 import Tab from "@material-ui/core/Tab"
 import { Link } from "react-router-dom"
@@ -26,8 +25,8 @@ function SimpleTabs() {
 
     useEffect(() => {
         switch (window.location.pathname) {
-            case "/ariellaStudio":
-                handleChange(1)
+            case "/":
+                handleChange(0)
                 break
             case "/contact":
                 handleChange(2)
@@ -39,11 +38,10 @@ function SimpleTabs() {
                 handleChange(4)
                 break
             default:
-                handleChange(0)
+                handleChange(1)
                 break
         }
     })
-    // eslint-disable-next-line no-console
 
     return (
         <Tabs value={value} aria-label="simple tabs example">
