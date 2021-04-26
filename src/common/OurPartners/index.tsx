@@ -18,7 +18,7 @@ const OurTeam: React.FC = () => {
     return (
         <Container>
             <Column alignItems="center">
-                <Title fontSize="2.2rem">Nossos Parceiros</Title>
+                <Title fontSize="2.2rem">Nossos Clientes</Title>
                 <Carousel className="slideFull" animation="slide">
                     <Row justifyContent="center">{CardCreate(Sscm)}</Row>
                 </Carousel>

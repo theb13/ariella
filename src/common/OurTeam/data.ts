@@ -27,8 +27,8 @@ export const ourTeamData = [
         americana. Na sua carreira já trabalhou para IREX International, Elizabeth Glaser e Sociedade do Notícias.
          Arsenio Manhice é docente nas Universidade São Tomás de Moçambique e Instituto Superior de Comunicação e
         Imagem. Possui diversas publicações feitas na sua qualidade de consultor. Sua formação acadêmica passa pela
-        Escola de Jornalismo onde formau se em Jornalismo e, de seguida fez Direito na Universidade Eduardo Mondlane. É
-        casado e pai de 4 filhos. Seu maior sonho é tornar Ariella uma empresa de referência na assitência técnica à
+        Escola de Jornalismo onde formau se em Jornalismo e, de seguida fez Direito na Universidade Eduardo Mondlane.
+        Seu maior sonho é tornar Ariella uma empresa de referência na assitência técnica à
         empresas e organizações de sociedade civil.`,
         img: Arsenio,
     },
@@ -38,8 +38,8 @@ export const ourTeamData = [
         office: "Directora Executiva",
         text: `Directora Executiva da Ariella Boats & Services S.A desde a sua constituição. Rita Manhice é colaboradora da
         empresa Gespetro S.A. onde ocupa o cargo de Gestora. Tem cerca de 10 anos de experiência como gestora.
-        É formada em Gestão de empresa e Recursos Humanos pelo Instituto Superior Alberto Chipande. Casada e mãe de 4
-        filhos, Rita está sempre pronta pra novos desafios profissionais. Seu maior sonho é tornar-se empresária e gestora
+        É formada em Gestão de empresa e Recursos Humanos pelo Instituto Superior Alberto Chipande. Rita está sempre pronta pra novos desafios profissionais.
+        Seu maior sonho é tornar-se empresária e gestora
         de sucesso.`,
         img: Logo,
     },
@@ -91,7 +91,7 @@ export const ourTeamData = [
         de conteúdo audiovisual. Ao longo da sua carreira profissional, desempenhou funções similares na estação
         televisiva TOp TV. Individualmente, Stélio Cangela tem feito trabalhos de filmagem e edição de vídeos para eventos.
         Antes de se dedicar à produção audiovisual, foi bailarino profissional durante muitos anos, tendo trabalhado com
-        vários artistas moçambicanos, para além de participações em vídeo clipes. Actualmente solteiro, Cangela vive com
+        vários artistas moçambicanos, para além de participações em vídeo clipes. Actualmente Cangela vive com
         os seus pais e irmãos, carregando vários sonhos como, por exemplo, ganhar prestígio e destaque profissional na sua
         área de trabalho.`,
         img: Stelio,

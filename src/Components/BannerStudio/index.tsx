@@ -48,9 +48,9 @@ const BannerStudio: React.FC = () => {
                                     (+258) 87 774 5372
                                 </Title>
                             </a>
-                            <a href="tel:+255842376204">
+                            <a href="tel:+255841504204">
                                 <Title fontSize="1.1rem">
-                                    (+258) 84 237 6204
+                                    (+258) 84 150 4204
                                 </Title>
                             </a>
                         </Column>

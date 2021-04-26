@@ -10,7 +10,7 @@ const Banner: React.FC = () => {
                 <Title className="banner-title" color="#fff" fontSize="2rem">
                     Olá,
                     <br />
-                    Bem Vindo a <br />
+                    Bem Vindo à <br />
                     Nossa Pagina
                 </Title>
             </Row>

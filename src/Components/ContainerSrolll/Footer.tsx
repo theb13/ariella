@@ -12,14 +12,22 @@ const Footer: React.FC = () => {
         <ContainerFooter>
             <Row justifyContent="space-between" flexWrap>
                 <Row justifyContent="space-around" alignItems="center">
-                    <a href="tel:+255840000000">
-                        <PhoneForwardedOutlinedIcon color="primary" />
-                        <p>(+255) 84 000 0000</p>
-                    </a>
-                    <a href="mailto:info@alphacapital.com">
-                        <MailOutlineIcon color="primary" />{" "}
-                        <p>info@ariellaboats.com</p>
-                    </a>
+                    <Column alignItems="center">
+                        <PhoneForwardedOutlinedIcon
+                            style={{ color: "#164B94" }}
+                        />
+                        <a href="tel:+255877901373">+258 87 790 1373</a>
+                        <a href="tel:+255841504204">+258 84 150 4204</a>
+                    </Column>
+                    <Column alignItems="center">
+                        <MailOutlineIcon style={{ color: "#164B94" }} />{" "}
+                        <a href="mailto:info@ariellaboats.com">
+                            info@ariellaboats.com
+                        </a>
+                        <a href="mailto:ariellaboats@gmail.com">
+                            ariellaboats@gmail.com
+                        </a>
+                    </Column>
                 </Row>
                 <Row justifyContent="space-around">
                     <a
@@ -42,7 +50,7 @@ const Footer: React.FC = () => {
             <Column>
                 <Row justifyContent="center">
                     <Text color="#FFF">
-                        © 2020 Todos Direitos Reservados a AriellaBoats.
+                        © 2020 Todos Direitos Reservados à AriellaBoats.
                     </Text>
                 </Row>
             </Column>
