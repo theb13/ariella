@@ -44,7 +44,9 @@ const SingleViewMedia: React.FC = () => {
     }, [x])
     return (
         <>
-            <Container>{data ? <Overview data={data} /> : <div />}</Container>
+            <Container>
+                {data ? <Overview id={id} data={data} /> : <div />}
+            </Container>
 
             <Loader loading={loading} />
             {media ? <ImageGridList medias={media} /> : null}

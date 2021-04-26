@@ -3,26 +3,17 @@ import React, { useEffect, useState } from "react"
 import ReactPlayer from "react-player"
 import Loader from "../../Components/Loader"
 import PostCard from "../../Components/PostCard"
-import { Post, PropsModalBLog } from "../../helpers/types"
+import { Post } from "../../helpers/types"
 import { getPosts, getYoutubeVideos } from "../../Services/api"
 import { Row, Title } from "../../styles"
-import ModalView from "./ModalView"
-
-// import { Container } from "./styles"
 
 const Blog: React.FC = () => {
-    const [open, setOpen] = React.useState(false)
-    const [modalData, setModalData] = React.useState<PropsModalBLog>()
     const one = 1
     const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
     const [playList, setPlaylist] = useState([])
     const [offset, setOffset] = useState<number>(1)
 
-    const handleOpen = (item: PropsModalBLog) => {
-        setModalData(item)
-        setOpen(true)
-    }
     useEffect(() => {
         setLoading(true)
         getYoutubeVideos()
@@ -62,8 +53,9 @@ const Blog: React.FC = () => {
                     key={`${post.date}-${Math.random() * 30}`}
                     title={post.title.rendered}
                     img={post.featured_media_src_url}
-                    handleOpen={handleOpen}
-                    body={post.content.rendered}
+                    id={post.id}
+                    // handleOpen={handleOpen}
+                    // body={post.content.rendered}
                 />
             )
         })
@@ -88,7 +80,7 @@ const Blog: React.FC = () => {
         })
     }
     return (
-        <Container>
+        <Container style={{ marginTop: 20 }}>
             <h1>Noticias</h1>
             <Loader loading={loading} />
             <Row flexWrap justifyContent="space-around">
@@ -114,13 +106,6 @@ const Blog: React.FC = () => {
             <Row flexWrap justifyContent="space-between">
                 {renderYoutube()}
             </Row>
-            {modalData?.title ? (
-                <ModalView
-                    open={open}
-                    setOpen={setOpen}
-                    modalData={modalData}
-                />
-            ) : null}
         </Container>
     )
 }

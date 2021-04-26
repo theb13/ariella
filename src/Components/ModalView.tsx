@@ -5,8 +5,8 @@ import Modal from "@material-ui/core/Modal"
 import Backdrop from "@material-ui/core/Backdrop"
 import Fade from "@material-ui/core/Fade"
 import Avatar from "@material-ui/core/Avatar"
-import { OurTeamProps } from "./data"
-import { Column, Row, Text, Title } from "../../styles"
+import { Column, Row, Text, Title } from "../styles"
+import { ModalProps } from "../helpers/types"
 
 const OutlineAvatar = styled.div`
     position: relative;
@@ -50,13 +50,6 @@ const StyledDiv = styled(Row)`
     }
 `
 
-const StyledMediaQuery = styled(Modal)`
-    @media (min-width: 1000px) {
-        .paper {
-            max-width: 700px;
-        }
-    } ;
-`
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         modal: {
@@ -83,10 +76,10 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     open: boolean
     setOpen: any
-    person: OurTeamProps
+    dataModal: ModalProps
 }
 
-const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
+const ModalView: React.FC<Props> = ({ open, setOpen, dataModal }: Props) => {
     const classes = useStyles()
 
     const handleClose = () => {
@@ -94,7 +87,7 @@ const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
     }
 
     return (
-        <StyledMediaQuery
+        <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             className={classes.modal}
@@ -107,14 +100,21 @@ const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
             }}
         >
             <Fade in={open}>
-                <Row className={classes.paper} flexWrap justifyContent="center">
-                    <OutlineAvatar>
-                        <Avatar
-                            alt="Remy Sharp"
-                            src={person.img}
-                            className={classes.size}
-                        />
-                    </OutlineAvatar>
+                <Row
+                    className={`${classes.paper} modal`}
+                    flexWrap
+                    justifyContent="center"
+                >
+                    {dataModal.img ? (
+                        <OutlineAvatar>
+                            <Avatar
+                                alt="Remy Sharp"
+                                src={dataModal.img}
+                                className={classes.size}
+                            />
+                        </OutlineAvatar>
+                    ) : null}
+
                     <Column style={{ width: "100%" }}>
                         <StyledDiv justifyContent="center">
                             <Title
@@ -127,15 +127,19 @@ const ModalView: React.FC<Props> = ({ open, setOpen, person }: Props) => {
                                     zIndex: 5,
                                 }}
                             >
-                                {person.name}
+                                {dataModal.name
+                                    ? dataModal.name
+                                    : dataModal.title}
                             </Title>
                         </StyledDiv>
-                        <Text>{person.text}</Text>
+                        <Text style={{ padding: "0 15px" }}>
+                            {dataModal.text}
+                        </Text>
                         <StyledDiv />
                     </Column>
                 </Row>
             </Fade>
-        </StyledMediaQuery>
+        </Modal>
     )
 }
 

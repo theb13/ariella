@@ -18,6 +18,16 @@ export const getPosts = (offset: number) =>
                 reject(err)
             })
     })
+export const getSinglePost = (id: number) =>
+    new Promise((resolve, reject) => {
+        api.get(`wp-json/wp/v2/posts/${id}`)
+            .then((response) => {
+                resolve(response.data as Posts)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
 
 export const getYoutubeVideos = () =>
     new Promise((resolve, reject) => {

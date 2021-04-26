@@ -9,9 +9,10 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
 
 import { Button } from "@material-ui/core"
+import { Container } from "./styles"
 import { OurTeamProps, ourTeamData as info } from "./data"
 import { Column, Title, Row, StyledCard } from "../../styles"
-import ModalView from "./ModalView"
+import ModalView from "../../Components/ModalView"
 
 const useStyles = makeStyles({
     root: {
@@ -128,7 +129,7 @@ const OurTeam: React.FC = () => {
                 {displaySize()}
             </Column>
             {person ? (
-                <ModalView open={open} setOpen={setOpen} person={person} />
+                <ModalView open={open} setOpen={setOpen} dataModal={person} />
             ) : null}
         </Container>
     )

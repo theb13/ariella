@@ -42,7 +42,10 @@ const Footer: React.FC = () => {
                     >
                         <YouTubeIcon style={{ color: "#FF0000" }} />
                     </a>
-                    <a target="blank" href="mailto:info@alphacapital.com">
+                    <a
+                        target="blank"
+                        href="https://www.instagram.com/ariellastudiomz/"
+                    >
                         <InstagramIcon style={{ color: "#D62976" }} />
                     </a>
                 </Row>

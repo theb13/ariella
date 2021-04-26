@@ -65,14 +65,14 @@ export const ourServicesStudioData = [
     {
         id: "Eventos socias",
         title: "Acompanhamento de Eventos socias",
-        text: `Aprecia aqui o nosso portefólio mais recente de material publicitário. Para produzir sua publicidade connosco é só ligar e solicitar.`,
+        text: `A Ariella Studio faz cobertura de eventos desde conferências; reuniões; festas; e muito mais. Aprecia aqui o nosso portefólio mais recente de eventos que cobrimos. `,
         icon: 5,
         img: Casamento,
     },
     {
         id: "Publicidade",
         title: "Produção de publicidade",
-        text: `A Ariella Studio faz cobertura de eventos desde conferências; reuniões; festas; e muito mais. Aprecia aqui o nosso portefólio mais recente de eventos que cobrimos. `,
+        text: `Aprecia aqui o nosso portefólio mais recente de material publicitário. Para produzir sua publicidade connosco é só ligar e solicitar.`,
         icon: 6,
         img: Namoro,
     },

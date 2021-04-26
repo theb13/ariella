@@ -10,7 +10,6 @@ const OurTeam: React.FC = () => {
         return (
             <div className="overlay">
                 <img src={img} alt="" width="260" />
-                {/* <Text>{name}</Text> */}
             </div>
         )
     }

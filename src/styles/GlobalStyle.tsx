@@ -37,4 +37,10 @@ export const GlobalStyle = createGlobalStyle`
             display:none;
         }
     }
+    @media (min-width: 1200px) {
+        .modal {
+            max-width: 900px ;
+        }
+    }
+
 `

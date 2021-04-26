@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import BreadCrumb from "../../Components/BreadCrumb"
 import { Column, Row, Title, Text } from "../../styles"
 
 const Img = styled.img`
@@ -33,14 +34,16 @@ const StyledDiv = styled.div`
 `
 interface Props {
     data: any
+    id: string
 }
-const Overview: React.FC<Props> = ({ data }: Props) => {
+const Overview: React.FC<Props> = ({ data, id }: Props) => {
     return (
         <Column style={{ marginTop: 30, marginBottom: 30 }}>
             <Row justifyContent="center">
                 <span />
                 <Title fontSize="2rem">ARIELLA BOATS & SERVICES S.A.</Title>
             </Row>
+            <BreadCrumb text2={id} text1="Ariella Studio" link="/blog" />
             <Row justifyContent="center" style={{ flexWrap: "wrap-reverse" }}>
                 <Column style={{ maxWidth: "600px" }}>
                     <Title fontSize="1.8rem">{data.title}</Title>

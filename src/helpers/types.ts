@@ -2,7 +2,7 @@ export interface Post {
     author: string
     // categories: [1]
     comment_status: string
-    content: { rendered: string; protected: boolean }
+    content: { rendered: any; protected: boolean }
     date: string
     date_gmt: string
     excerpt: { rendered: string; protected: boolean }
@@ -39,4 +39,14 @@ export interface Media {
 
 export interface Medias {
     medias: Media[]
+}
+
+export interface ModalProps {
+    id: number
+    name: string
+    office: string
+    text: string
+    title: string
+    icon: any
+    img: string
 }

@@ -7,7 +7,7 @@ import {
     ourServicesStudioData,
     OurServicesProps,
 } from "./data"
-import ModalView from "./ModalView"
+import ModalView from "../../Components/ModalView"
 
 interface Props {
     // eslint-disable-next-line react/require-default-props
@@ -56,7 +56,7 @@ const OurServices: React.FC<Props> = ({ studio }: Props) => {
                 {studio ? renderServicesStudio() : renderServices()}
             </Row>
             {service ? (
-                <ModalView open={open} setOpen={setOpen} service={service} />
+                <ModalView open={open} setOpen={setOpen} dataModal={service} />
             ) : null}
         </Column>
     )
