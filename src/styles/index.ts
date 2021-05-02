@@ -79,7 +79,16 @@ export const StyledCard = styled(Card)`
         left: 10%;
         z-index: 2;
     }
-
+    .post-views {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 2;
+        background-color: #fff;
+        width: 60px;
+        /* padding: 2px 10px; */
+        border-radius: 10px;
+    }
     :hover {
         .card-content {
             display: block;
@@ -123,7 +132,6 @@ export const StyledCard = styled(Card)`
         -webkit-transition: all 500ms ease;
         -ms-transition: all 500ms ease;
         -o-transition: all 500ms ease;
-
         background-color: #3039ac;
     }
     ::before {

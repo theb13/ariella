@@ -7,7 +7,7 @@ const Img = styled.img`
     width: 300px;
     border-radius: 20px;
     box-shadow: 1px 1px 2px #164b94;
-    max-height: 375px;
+    height: auto;
 `
 const StyledDiv = styled.div`
     position: relative;
@@ -43,7 +43,11 @@ const Overview: React.FC<Props> = ({ data, id }: Props) => {
                 <span />
                 <Title fontSize="2rem">ARIELLA BOATS & SERVICES S.A.</Title>
             </Row>
-            <BreadCrumb text2={id} text1="Ariella Studio" link="/blog" />
+            <BreadCrumb
+                text2={id}
+                text1="Ariella Studio"
+                link="/ariellaStudio"
+            />
             <Row justifyContent="center" style={{ flexWrap: "wrap-reverse" }}>
                 <Column style={{ maxWidth: "600px" }}>
                     <Title fontSize="1.8rem">{data.title}</Title>

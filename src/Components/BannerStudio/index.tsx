@@ -40,9 +40,7 @@ const BannerStudio: React.FC = () => {
                             <Title color="#fff" fontSize="2.1rem">
                                 Um Click, uma história!
                             </Title>
-                            <Title color="#fff">
-                                Marque a tua sessão! e conte-nos a tua história
-                            </Title>
+                            <Title color="#fff">Marque a sua sessão!</Title>
                             <a href="tel:+255877745372">
                                 <Title fontSize="1.1rem">
                                     (+258) 87 774 5372

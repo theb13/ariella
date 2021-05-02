@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import "react-multi-carousel/lib/styles.css"
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -42,5 +43,13 @@ export const GlobalStyle = createGlobalStyle`
             max-width: 900px ;
         }
     }
-
+    .carousel-container {
+        width: 100% ;
+    }
+    .carousel-item{
+        padding:40px;
+    }
+    /* [dir="rtl"] .carousel-container {
+        direction: ltr;
+    } */
 `

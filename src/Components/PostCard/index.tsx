@@ -5,7 +5,8 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
 import { Link } from "react-router-dom"
-import { StyledCard } from "../../styles"
+import VisibilityIcon from "@material-ui/icons/Visibility"
+import { Row, StyledCard, Text } from "../../styles"
 
 const useStyles = makeStyles({
     root: {
@@ -25,15 +26,20 @@ interface Props {
     title: string
     img: string
     id: number
+    views: number
 }
 
-const PostCard: React.FC<Props> = ({ title, img, id }: Props) => {
+const PostCard: React.FC<Props> = ({ title, img, id, views }: Props) => {
     const classes = useStyles()
-    // const data = { title, body }
-
     return (
         <Link to={`blog/${id}`}>
             <StyledCard className={classes.root}>
+                <Row justifyContent="center" className="post-views">
+                    <Text>{views}</Text>
+                    <VisibilityIcon
+                        style={{ color: "#5c8599", marginLeft: 5 }}
+                    />
+                </Row>
                 <CardActionArea>
                     <CardMedia className={classes.media} image={img} />
                     <CardContent>

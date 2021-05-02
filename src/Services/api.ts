@@ -1,6 +1,8 @@
 import axios from "axios"
 import { Medias, Posts } from "../helpers/types"
 
+const allowedFieldsPost =
+    "author,id,title,views,featured_media,featured_media_src_url,img_url"
 const api = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
     timeout: 10000,
@@ -10,7 +12,9 @@ const YOUTUBE_PLAYLIST_ITEMS_API =
 
 export const getPosts = (offset: number) =>
     new Promise((resolve, reject) => {
-        api.get(`wp-json/wp/v2/posts?per_page=6&page=${offset}`)
+        api.get(
+            `wp-json/wp/v2/posts?_fields=${allowedFieldsPost}&per_page=6&page=${offset}`
+        )
             .then((response) => {
                 resolve(response.data as Posts)
             })

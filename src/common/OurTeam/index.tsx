@@ -1,5 +1,4 @@
 import React from "react"
-import Carousel from "react-material-ui-carousel"
 import { makeStyles } from "@material-ui/core/styles"
 
 import CardActionArea from "@material-ui/core/CardActionArea"
@@ -11,8 +10,9 @@ import Typography from "@material-ui/core/Typography"
 import { Button } from "@material-ui/core"
 import { Container } from "./styles"
 import { OurTeamProps, ourTeamData as info } from "./data"
-import { Column, Title, Row, StyledCard } from "../../styles"
+import { Column, Title, StyledCard } from "../../styles"
 import ModalView from "../../Components/ModalView"
+import Carousel from "../../Components/Carousel"
 
 const useStyles = makeStyles({
     root: {
@@ -62,71 +62,20 @@ const OurTeam: React.FC = () => {
         )
     }
 
-    function renderCard(min: number, max: number) {
-        return info.map((data: OurTeamProps) => {
-            if (data.id >= min && data.id <= max)
-                return (
-                    <CardCreate
-                        key={`${data.name + Math.random() * 10}`}
-                        {...data}
-                    />
-                )
-            return null
-        })
-    }
-
-    function Item({ min, max }: any) {
-        return (
-            <Row className="row" justifyContent="space-around">
-                {renderCard(min, max)}
-            </Row>
-        )
-    }
-
-    // eslint-disable-next-line consistent-return
-    function displaySize() {
-        // const window = Window as any
-        const width = document.documentElement.clientWidth as number
-
-        if (width > 1100) {
-            return (
-                <Carousel className="slideFull" animation="slide">
-                    <Item min={1} max={3} />
-                    <Item min={4} max={6} />
-                    <Item min={7} max={9} />
-                </Carousel>
-            )
-        }
-        if (width > 775) {
-            return (
-                <Carousel className="slideFull" animation="slide">
-                    <Item min={1} max={2} />
-                    <Item min={3} max={4} />
-                    <Item min={5} max={6} />
-                    <Item min={7} max={8} />
-                </Carousel>
-            )
-        }
-        return (
-            <Carousel className="slideFull" animation="slide">
-                <Item min={1} max={1} />
-                <Item min={2} max={2} />
-                <Item min={3} max={3} />
-                <Item min={4} max={4} />
-                <Item min={5} max={5} />
-                <Item min={6} max={6} />
-                <Item min={7} max={7} />
-                <Item min={8} max={8} />
-                <Item min={9} max={9} />
-            </Carousel>
-        )
-    }
-
     return (
         <Container>
             <Column alignItems="center">
                 <Title fontSize="2.2rem">Nossa Equipe</Title>
-                {displaySize()}
+                <Carousel>
+                    {info.map((data: OurTeamProps) => {
+                        return (
+                            <CardCreate
+                                key={`${data.name + Math.random() * 10}`}
+                                {...data}
+                            />
+                        )
+                    })}
+                </Carousel>
             </Column>
             {person ? (
                 <ModalView open={open} setOpen={setOpen} dataModal={person} />

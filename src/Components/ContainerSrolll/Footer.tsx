@@ -4,6 +4,7 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import YouTubeIcon from "@material-ui/icons/YouTube"
 import InstagramIcon from "@material-ui/icons/Instagram"
+import TwitterIcon from "@material-ui/icons/Twitter"
 import { ContainerFooter } from "./styles"
 import { Row, Column, Text } from "../../styles"
 
@@ -30,6 +31,9 @@ const Footer: React.FC = () => {
                     </Column>
                 </Row>
                 <Row justifyContent="space-around">
+                    <a target="blank" href="https://twitter.com/AriellaBoats">
+                        <TwitterIcon style={{ color: "#2AA9E0" }} />
+                    </a>
                     <a
                         target="blank"
                         href="https://www.facebook.com/Ariella-Boats-105606138175180"

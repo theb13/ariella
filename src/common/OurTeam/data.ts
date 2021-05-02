@@ -124,11 +124,4 @@ export const ourTeamData = [
         `,
         img: Dalton,
     },
-    {
-        id: 10,
-        name: "Dr Arsénio",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text: "",
-        img: Logo,
-    },
 ] as OurTeamProps[]

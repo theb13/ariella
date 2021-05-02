@@ -1,20 +1,12 @@
 export interface Post {
     author: string
-    // categories: [1]
     comment_status: string
     content: { rendered: any; protected: boolean }
     date: string
     date_gmt: string
     excerpt: { rendered: string; protected: boolean }
-    // featured_media: 0
     id: number
-    // link: "https://theb.co.mz/wp/seco/"
-    // meta: []
-    // modified: "2020-11-29T22:40:49"
-    // modified_gmt: "2020-11-29T22:40:49"
-    // ping_status: "open"
-    slug: string
-    status: string
+    views: number
     featured_media_src_url: string
     template: ""
     title: { rendered: string }

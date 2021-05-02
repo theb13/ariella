@@ -32,7 +32,7 @@ const Blog: React.FC = () => {
         setLoading(true)
         getPosts(offset)
             .then((values: any) => {
-                const data = values.concat(posts)
+                const data = posts.concat(values)
                 setPosts(data)
             })
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -44,7 +44,6 @@ const Blog: React.FC = () => {
             })
     }, [offset])
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function renderPosts() {
         if (posts.length < 1) return null
         return posts.map((post: Post) => {
@@ -54,8 +53,7 @@ const Blog: React.FC = () => {
                     title={post.title.rendered}
                     img={post.featured_media_src_url}
                     id={post.id}
-                    // handleOpen={handleOpen}
-                    // body={post.content.rendered}
+                    views={post.views}
                 />
             )
         })

@@ -1,28 +1,28 @@
 import React from "react"
-import Carousel from "react-material-ui-carousel"
 
-import { Column, Row, Title } from "../../styles"
-import Sscm from "../../assets/img_our_partners/sscm.jpg"
-import { Container } from "./styles"
+import { Column, Title } from "../../styles"
+import { ourPartnerData } from "./data"
+import Carousel from "../../Components/Carousel"
 
 const OurTeam: React.FC = () => {
-    function CardCreate(img: string) {
-        return (
-            <div className="overlay">
-                <img src={img} alt="" width="260" />
-            </div>
-        )
-    }
-
     return (
-        <Container>
+        <section>
             <Column alignItems="center">
                 <Title fontSize="2.2rem">Nossos Clientes</Title>
-                <Carousel className="slideFull" animation="slide">
-                    <Row justifyContent="center">{CardCreate(Sscm)}</Row>
+                <Carousel>
+                    {ourPartnerData.map((item) => (
+                        <div key={item.id}>
+                            <img
+                                src={item.img}
+                                alt=""
+                                width="220"
+                                height="150"
+                            />
+                        </div>
+                    ))}
                 </Carousel>
             </Column>
-        </Container>
+        </section>
     )
 }
 
