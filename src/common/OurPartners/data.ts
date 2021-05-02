@@ -1,91 +1,28 @@
-import Logo from "../../assets/img/logo.png"
+import sccm from "../../assets/img_our_partners/sscm.jpg"
+import anjur from "../../assets/img_our_partners/anjur.jpg"
+import cism from "../../assets/img_our_partners/cism.png"
+import kuwaka from "../../assets/img_our_partners/kuwaka.jpeg"
 
-export interface OurTeamProps {
+export interface OurPartnerProps {
     id: number
-    name: string
-    office: string
-    text: string
     img: string
 }
 
-export const ourTeamData = [
+export const ourPartnerData = [
     {
         id: 1,
-        name: "Ministerio da Saúde",
-        text:
-            "Para melhor aproveitamento do seu capital humano, a Ariella Boats & Services S.A. dispõe de capacidade para realização de consultorias na área jurídica; traduções; representação de marcas, entre outras. Marque uma reunião de trabalho e terá maiores vantagens em trabalhar connosco.",
-        img: Logo,
+        img: sccm,
     },
     {
         id: 2,
-        name: "Ministerio da Saúde",
-        office: "INVESTIGAÇÃO E ESTUDOS",
-        text:
-            "A Ariella Boats & Services S.A. dedica-se à realização de pesquisas e estudos para informar aos gestores das corporações e tomadoresde decisão. Nesta área, a empresa elabora relatórios; posicionamentos, boletins e outras publicações.",
-        img: Logo,
+        img: anjur,
     },
     {
         id: 3,
-        name: "Ministerio da Saúde",
-        office: "FILMAGENS E FOTOGRAFIAS",
-        text:
-            "A Ariella Boats & Services S.A. criou um estúdio que presta serviços de fotografias, filmagens, gravação de áudio com a mais elevada qualidade. O estúdio é dotado dos mais modernos equipamentos e tecnologias, podendo criar e transmitir todo o tipo de programas online.",
-        img: Logo,
+        img: cism,
     },
     {
         id: 4,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
+        img: kuwaka,
     },
-    {
-        id: 5,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-    {
-        id: 6,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-    {
-        id: 7,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-    {
-        id: 8,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-    {
-        id: 9,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-    {
-        id: 10,
-        name: "Ministerio da Saúde",
-        office: "ASSISTÊNCIA TÉCNICA E DESENVOLVIMENTO ORGANIZACIONAL",
-        text:
-            "• Contratos de sociedade ou estatutos; <br/>• Planos Estratégicos com respectivos <br/> planos de trabalho; <br/>• Estratégias de Advocacia, Comunicação, <br/> Marketing & Branding; <br/>• Planos de Monitoria, avaliação e aprendizagem <br/>• Políticas de Recursos Humanos; de Género; <br/> de Inclusão Social; <br/>• Regulamento interno; <br/>• Capacitação, etc.",
-        img: Logo,
-    },
-] as OurTeamProps[]
+] as OurPartnerProps[]
