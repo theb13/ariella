@@ -45,9 +45,6 @@ const Overview: React.FC = () => {
                         que diz respeito a qualidade organizacional na sua área
                         de actuação no mercado.
                     </Text>
-                    {/* <Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod voluptate harum unde. Sed aliquid iure est repellendus. Fugit beatae magnam sapiente facere amet, neque accusamus reprehenderit perspiciatis similique explicabo.
-					</Text> */}
                 </Column>
                 <StyledDiv className="overview-img hiddenMobile">
                     <Img src={Logo} alt="" />

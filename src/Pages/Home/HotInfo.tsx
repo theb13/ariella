@@ -8,6 +8,7 @@ const HotInfo: React.FC = () => {
     return (
         <Row justifyContent="center" alignItems="start" flexWrap>
             <ReactPlayer
+                controls
                 style={{
                     maxWidth: "300px",
                     maxHeight: "200px",

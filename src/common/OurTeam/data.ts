@@ -1,4 +1,3 @@
-import Logo from "../../assets/img/logo.png"
 import Abdala from "../../assets/img_our_team/Abdala.jpg"
 import Amina from "../../assets/img_our_team/Amina.jpg"
 import Stelio from "../../assets/img_our_team/Stelio.jpg"
@@ -32,17 +31,17 @@ export const ourTeamData = [
         empresas e organizações de sociedade civil.`,
         img: Arsenio,
     },
-    {
-        id: 2,
-        name: "RITA MANHICE",
-        office: "Directora Executiva",
-        text: `Directora Executiva da Ariella Boats & Services S.A desde a sua constituição. Rita Manhice é colaboradora da
-        empresa Gespetro S.A. onde ocupa o cargo de Gestora. Tem cerca de 10 anos de experiência como gestora.
-        É formada em Gestão de empresa e Recursos Humanos pelo Instituto Superior Alberto Chipande. Rita está sempre pronta pra novos desafios profissionais.
-        Seu maior sonho é tornar-se empresária e gestora
-        de sucesso.`,
-        img: Logo,
-    },
+    // {
+    //     id: 2,
+    //     name: "RITA MANHICE",
+    //     office: "Directora Executiva",
+    //     text: `Directora Executiva da Ariella Boats & Services S.A desde a sua constituição. Rita Manhice é colaboradora da
+    //     empresa Gespetro S.A. onde ocupa o cargo de Gestora. Tem cerca de 10 anos de experiência como gestora.
+    //     É formada em Gestão de empresa e Recursos Humanos pelo Instituto Superior Alberto Chipande. Rita está sempre pronta pra novos desafios profissionais.
+    //     Seu maior sonho é tornar-se empresária e gestora
+    //     de sucesso.`,
+    //     img: Logo,
+    // },
     {
         id: 3,
         name: "JENNIFER MANHICE",
@@ -107,8 +106,8 @@ export const ourTeamData = [
     {
         id: 8,
         name: "HERMÍNIA CHILAULE",
-        office: "Estagiária de Administração de Negócios",
-        text: `É estagiária para a área de Administração de Negócios na Ariella Boats & Services S. A. Hermínia é formada em
+        office: "Assitente de Administração de Negócios",
+        text: `É assistente de Administração de Negócios na Ariella Boats & Services S. A. Hermínia é formada em
         Economia pela Universidade de Goa, na Índia, onde teve também a oportunidade de participar de um estágio, durante
         um mês, como Assistente de Negócios numa empresa que se dedica a poupança e investimentos. Embora o seu
         maior sonho seja de se tornar em uma gestora de empresa própria ou não, a sua especialidade é Economia e
@@ -119,7 +118,7 @@ export const ourTeamData = [
         id: 9,
         name: "DALTON SITOE",
         office: "Marketing digital",
-        text: `Voluntário da Ariella Boats & Service, desde Fevereiro de 2021, desempenhando a função de oficial de marketing digital. Trabalha com o mundo digital desde 2016, altura em que fundou a Revista Biografia, a primeira do género em Moçambique. É, ainda, webdesigner, e, explorando sua capacidade de criar e de inovar, fundou o site evangelístico Chave de Davi, em 2018; e a loja online O Ardina Digital, em 2020.
+        text: `Está na Ariella Boats & Service desde Fevereiro de 2021, desempenhando a função de oficial de marketing digital. Trabalha com o mundo digital desde 2016, altura em que fundou a Revista Biografia, a primeira do género em Moçambique. É, ainda, webdesigner, e, explorando sua capacidade de criar e de inovar, fundou o site evangelístico Chave de Davi, em 2018; e a loja online O Ardina Digital, em 2020.
         É, desde 2020, licenciado em jornalismo, pela Universidade Eduardo Mondlane (UEM), e é jornalista de profissão desde 2013, sendo, actualmente, editor executivo da Revista ÍDOLO, e correspondente da Revista Macau, órgão de comunicação baseado em Macau, na China. Por meio do seu amor pelas soluções digitais, redacção jornalística, e experiência nos dois ramos, espera impactar empresas e organizações da sociedade civil através da demonstração digital das soluções que a Ariella oferece.
         `,
         img: Dalton,

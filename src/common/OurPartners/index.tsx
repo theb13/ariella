@@ -11,14 +11,18 @@ const OurTeam: React.FC = () => {
                 <Title fontSize="2.2rem">Nossos Clientes</Title>
                 <Carousel>
                     {ourPartnerData.map((item) => (
-                        <div key={item.id}>
+                        <Column
+                            justifyContent="center"
+                            alignItems="center"
+                            key={item.id}
+                            style={{ height: 220 }}
+                        >
                             <img
                                 src={item.img}
                                 alt=""
-                                width="220"
-                                height="150"
+                                style={{ width: 200, height: "auto" }}
                             />
-                        </div>
+                        </Column>
                     ))}
                 </Carousel>
             </Column>

@@ -1,7 +1,7 @@
 import React from "react"
 import { Breadcrumbs, Typography } from "@material-ui/core"
-import Link from "@material-ui/core/Link"
 import NavigateNextIcon from "@material-ui/icons/NavigateNext"
+import { Link } from "react-router-dom"
 import { Separator } from "../styles"
 
 interface Props {
@@ -16,10 +16,10 @@ const BreadCrumb: React.FC<Props> = ({ text1, text2, link }: Props) => {
                 separator={<NavigateNextIcon fontSize="small" />}
                 aria-label="breadcrumb"
             >
-                <Link color="inherit" href="/">
+                <Link style={{ color: "inherit" }} to="/">
                     Início
                 </Link>
-                <Link color="inherit" href={link}>
+                <Link style={{ color: "inherit" }} to={link}>
                     {text1}
                 </Link>
                 <Typography color="textPrimary">{text2}</Typography>

@@ -7,8 +7,7 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
 
-import { Button } from "@material-ui/core"
-import { Container } from "./styles"
+import { Button, Container } from "@material-ui/core"
 import { OurTeamProps, ourTeamData as info } from "./data"
 import { Column, Title, StyledCard } from "../../styles"
 import ModalView from "../../Components/ModalView"
@@ -69,10 +68,14 @@ const OurTeam: React.FC = () => {
                 <Carousel>
                     {info.map((data: OurTeamProps) => {
                         return (
-                            <CardCreate
+                            <Column
+                                justifyContent="center"
+                                alignItems="center"
                                 key={`${data.name + Math.random() * 10}`}
-                                {...data}
-                            />
+                                style={{ width: "110%" }}
+                            >
+                                <CardCreate {...data} />
+                            </Column>
                         )
                     })}
                 </Carousel>
