@@ -33,10 +33,10 @@ export const getSinglePost = (id: number) =>
             })
     })
 
-export const getYoutubeVideos = () =>
+export const getYoutubeVideos = (videoID: any) =>
     new Promise((resolve, reject) => {
         api.get(
-            `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=6&playlistId=PL-As4Eo2YksHrCRElwSAACvqVPYpAxTqa&key=${process.env.REACT_APP_API_GOOGLE}`
+            `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&videoId=${videoID}&maxResults=6&playlistId=PL-As4Eo2YksHrCRElwSAACvqVPYpAxTqa&key=${process.env.REACT_APP_API_GOOGLE}`
         )
             .then((response) => {
                 resolve(response.data)

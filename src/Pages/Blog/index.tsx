@@ -1,6 +1,5 @@
 import { Button, Container } from "@material-ui/core"
 import React, { useEffect, useState } from "react"
-import ReactPlayer from "react-player"
 import Loader from "../../Components/Loader"
 import PostCard from "../../Components/PostCard"
 import { Post } from "../../helpers/types"
@@ -16,7 +15,7 @@ const Blog: React.FC = () => {
 
     useEffect(() => {
         setLoading(true)
-        getYoutubeVideos()
+        getYoutubeVideos("")
             .then((values: any) => {
                 setPlaylist(values.items)
             })
@@ -37,7 +36,8 @@ const Blog: React.FC = () => {
             })
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             .catch((err) => {
-                // console.log(err)
+                // eslint-disable-next-line no-console
+                console.log(err)
             })
             .finally(() => {
                 setLoading(false)
@@ -52,31 +52,29 @@ const Blog: React.FC = () => {
                     key={`${post.date}-${Math.random() * 30}`}
                     title={post.title.rendered}
                     img={post.featured_media_src_url}
-                    id={post.id}
+                    to={`blog/${post.id}`}
                     views={post.views}
                 />
             )
         })
     }
-    function renderYoutube() {
+    function renderYoutubeCard() {
         if (playList.length < 1) return null
         return playList.map(({ id, snippet }: any) => {
-            const { resourceId = {} } = snippet
+            const { title, thumbnails = {}, resourceId = {} } = snippet
+            const { standard } = thumbnails
+            const { videoId } = resourceId
             return (
-                <div key={id}>
-                    <ReactPlayer
-                        controls
-                        style={{
-                            maxWidth: "300px",
-                            maxHeight: "200px",
-                            margin: "10px",
-                        }}
-                        url={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                    />
-                </div>
+                <PostCard
+                    key={id}
+                    title={title}
+                    img={standard.url}
+                    to={`youtube/${videoId}`}
+                />
             )
         })
     }
+
     return (
         <Container style={{ marginTop: 20 }}>
             <h1>Noticias</h1>
@@ -102,7 +100,7 @@ const Blog: React.FC = () => {
             ) : null}
             <Title>Acompanhe o nosso canal</Title>
             <Row flexWrap justifyContent="space-between">
-                {renderYoutube()}
+                {renderYoutubeCard()}
             </Row>
         </Container>
     )
