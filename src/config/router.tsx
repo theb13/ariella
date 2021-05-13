@@ -5,8 +5,9 @@ import AriellaStudio from "../Pages/AriellaStudio"
 import Blog from "../Pages/Blog"
 import Contact from "../Pages/Contact"
 import Home from "../Pages/Home"
-import SingleBlogView from "../Pages/SingleBlogView"
+import SingleBlogView from "../Pages/SingleViewBlog"
 import SingleViewMedia from "../Pages/SingleViewMedia"
+import SingleViewYoutube from "../Pages/SingleViewYoutube"
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function Routes() {
@@ -18,6 +19,7 @@ function Routes() {
             <Route path="/blog/:id" component={SingleBlogView} />
             <Route path="/blog" component={Blog} />
             <Route path="/contact" component={Contact} />
+            <Route path="/youtube/:id" component={SingleViewYoutube} />
             <Route path="/:id" component={SingleViewMedia} />
         </Switch>
     )

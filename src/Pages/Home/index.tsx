@@ -1,3 +1,4 @@
+import { Container } from "@material-ui/core"
 import React from "react"
 import OurPartners from "../../common/OurPartners"
 import OurServices from "../../common/OurServices"
@@ -7,11 +8,9 @@ import Banner from "../../Components/Banner"
 import { Padding } from "../../styles"
 import HotInfo from "./HotInfo"
 
-import { Container } from "./styles"
-
 const Home: React.FC = () => {
     return (
-        <Container>
+        <main>
             <Banner />
             <Padding id="view" background>
                 <Overview />
@@ -22,9 +21,11 @@ const Home: React.FC = () => {
             <Padding background>
                 <OurServices />
             </Padding>
-            <OurTeam />
-            <OurPartners />
-        </Container>
+            <Container>
+                <OurTeam />
+                <OurPartners />
+            </Container>
+        </main>
     )
 }
 

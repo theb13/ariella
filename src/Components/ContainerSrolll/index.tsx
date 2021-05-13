@@ -73,7 +73,7 @@ function BackToTop(props: Props) {
                 <AppMenu />
             </AppBar>
             <Toolbar id="back-to-top-anchor" />
-            <div>{props.children}</div>
+            <div style={{ minHeight: "100vh" }}>{props.children}</div>
             <Footer />
             <ScrollTop {...props}>
                 <Fab

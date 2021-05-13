@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Container as ContainerM } from "@material-ui/core"
 
-export const Container = styled.div`
+export const Container = styled(ContainerM)`
     display: flex;
     flex-direction: column;
     align-items: center;
