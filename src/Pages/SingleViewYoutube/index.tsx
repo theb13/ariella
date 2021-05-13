@@ -7,6 +7,7 @@ import { Column, Row, Text, Title } from "../../styles"
 import { getYoutubeVideos } from "../../Services/api"
 import Loader from "../../Components/Loader"
 import BreadCrumb from "../../Components/BreadCrumb"
+import ShareButtons from "../../Components/ShareButtons"
 
 const defaultValue = {
     items: {
@@ -160,6 +161,11 @@ const SingleBlogView: React.FC = () => {
                         </StyledColumn>
                     </Column>
                 </Column>
+                <ShareButtons
+                    hashtag="#AriellaBoats #AriellaStudio"
+                    title={title}
+                    url={window.location.href}
+                />
             </Column>
         )
     }

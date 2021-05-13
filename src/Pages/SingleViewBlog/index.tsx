@@ -145,7 +145,7 @@ const SingleBlogView: React.FC = () => {
                 <ShareButtons
                     hashtag="#AriellaBoats #AriellaStudio"
                     title={data?.title.rendered || "Noticias"}
-                    url={window.location.pathname}
+                    url={window.location.href}
                 />
             </Column>
         </Container>
