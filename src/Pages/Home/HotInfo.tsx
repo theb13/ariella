@@ -1,5 +1,7 @@
 import React from "react"
 import ReactPlayer from "react-player"
+import ShareButtons from "../../Components/ShareButtons"
+
 import { Column, Row, Text, Title } from "../../styles"
 
 // import { Container } from './styles';
@@ -26,9 +28,12 @@ const HotInfo: React.FC = () => {
                     conferências online.Não deixe que a Covid-19 prejudique o
                     curso das suas actividades.
                 </Text>
-                {/* <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod voluptate harum unde. Sed aliquid iure est repellendus. Fugit beatae magnam sapiente facere amet, neque accusamus reprehenderit perspiciatis similique explicabo.
-            </Text> */}
+                <ShareButtons
+                    title=" Precisa de um parceiro para realização de conferências
+                    online?"
+                    url="https://www.youtube.com/watch?v=2qYvFxvyvKY"
+                    hashtag="#AriellaBoats #AriellaStudio"
+                />
             </Column>
         </Row>
     )
