@@ -3,7 +3,8 @@ import OurServices from "../../common/OurServices"
 import BannerStudio from "../../Components/BannerStudio"
 import { getMedia } from "../../Services/api"
 import { Padding } from "../../styles"
-import ImageGridList from "../../Components/ImageGridList"
+// import ImageGridList from "../../Components/ImageGridList"
+import Galery from "../../Components/Galery"
 
 // import { Container } from './styles';
 
@@ -28,7 +29,7 @@ const AriellaStudio: React.FC = () => {
             <Padding>
                 <OurServices studio />
             </Padding>
-            {media ? <ImageGridList medias={media} /> : null}
+            <Galery medias={media} view />
         </>
     )
 }

@@ -58,10 +58,10 @@ const Overview: React.FC<Props> = ({ data, id }: Props) => {
                         <Text> ariellaboats@gmail.com</Text>
                     </a>
                     <a href="tel:+255877745372">
-                        <Text>+258 87 774 5372</Text>
+                        <Text>(+258) 87 774 5372</Text>
                     </a>
-                    <a href="tel:+255842376204">
-                        <Text>+258 84 237 6204</Text>
+                    <a href="tel:+255841504204">
+                        <Text>(+258) 84 150 4204</Text>
                     </a>
                     <br />
                 </Column>

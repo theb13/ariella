@@ -5,7 +5,7 @@ import {
     OurServicesProps,
     ourServicesStudioData,
 } from "../../common/OurServices/data"
-import ImageGridList from "../../Components/ImageGridList"
+import Galery from "../../Components/Galery"
 import Loader from "../../Components/Loader"
 import { getMedia } from "../../Services/api"
 import Overview from "./Overview"
@@ -49,7 +49,7 @@ const SingleViewMedia: React.FC = () => {
             </Container>
 
             <Loader loading={loading} />
-            {media ? <ImageGridList medias={media} /> : null}
+            <Galery medias={media} view={false} />
         </>
     )
 }
