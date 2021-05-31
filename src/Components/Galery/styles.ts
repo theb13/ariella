@@ -46,6 +46,22 @@ export const Container = styled.section`
             &.hide {
                 display: none;
             }
+            /* &:hover {
+                z-index: 1;
+                transform: scale(2);
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            } */
         }
+    }
+`
+export const Paper = styled.div`
+    border: "2px solid #000";
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    width: 500px;
+    height: 500px;
+
+    @media (max-width: 720px) {
+        width: 300px;
+        height: 300px;
     }
 `

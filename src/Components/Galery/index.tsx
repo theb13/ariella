@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-plusplus */
-import React from "react"
+import React, { useState } from "react"
 import { Column } from "../../styles"
 
 import { Container } from "./styles"
 import { Media } from "../../helpers/types"
+import ModalView from "./ModalView"
 
 interface Props {
     medias: any
@@ -12,6 +13,13 @@ interface Props {
 }
 
 const Galery: React.FC<Props> = ({ medias, view }: Props) => {
+    const [open, setOpen] = useState(false)
+    const [img, setImg] = useState("")
+
+    const handleOpen = (item: string) => {
+        setImg(item)
+        setOpen(true)
+    }
     function handleClick(id: string) {
         const list = document.querySelectorAll(".galery-list")
         const itemBox = document.querySelectorAll(".galery-item-box")
@@ -93,15 +101,18 @@ const Galery: React.FC<Props> = ({ medias, view }: Props) => {
             </Column>
             <div className="galery">
                 {medias?.map((med: Media) => (
+                    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
                     <div
                         className="galery-item-box"
                         data-item={med.author}
                         key={med.guid.rendered + Math.random()}
+                        onClick={() => handleOpen(med.guid.rendered)}
                     >
                         <img src={med.guid.rendered} alt="imagem" />
                     </div>
                 ))}
             </div>
+            <ModalView open={open} setOpen={setOpen} img={img} />
         </Container>
     )
 }
