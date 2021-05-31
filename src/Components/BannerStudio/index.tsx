@@ -14,7 +14,7 @@ import {
 function createCards() {
     return ourServicesStudioData.map((data: OurServicesProps) => {
         return (
-            <Link to={`${data.id}`}>
+            <Link to={`${data.id}`} key={data.id + data.img}>
                 <Card>
                     <img src={data.img} alt="" width="200" />
                     <div className="img-description">
