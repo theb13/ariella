@@ -1,4 +1,3 @@
-import { Card } from "@material-ui/core"
 import styled from "styled-components"
 
 interface Props {
@@ -69,9 +68,27 @@ export const Padding = styled.div`
     background: ${({ background }: Props) => (background ? "#F8F8F8" : "#fff")};
 `
 
-export const StyledCard = styled(Card)`
+export const StyledCard = styled.div`
     position: relative;
     color: #fff;
+    height: 280px;
+    h3 {
+        font-size: 1.3rem;
+    }
+    clip-path: polygon(
+        0 45px,
+        45px 0,
+        100% 0,
+        100% calc(100% - 45px),
+        calc(100% - 45px) 100%,
+        0 100%,
+        0 45px
+    );
+    box-shadow: 0px 2px 2px -2px rgb(0, 0, 0, 20%),
+        0px 2px 2px 0px rgb(0, 0, 0, 14%), 0px 2px 4px 0px rgb(0, 0, 0, 12%);
+    :hover {
+        cursor: pointer;
+    }
     .card-content {
         display: none;
         position: absolute;
@@ -79,16 +96,7 @@ export const StyledCard = styled(Card)`
         left: 10%;
         z-index: 2;
     }
-    .post-views {
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        z-index: 2;
-        background-color: #fff;
-        width: 60px;
-        /* padding: 2px 10px; */
-        border-radius: 10px;
-    }
+
     :hover {
         .card-content {
             display: block;
@@ -119,13 +127,41 @@ export const StyledCard = styled(Card)`
             -o-transition: all 500ms ease;
         }
     }
+`
 
+export const PolygonCard = styled.div`
+    position: relative;
+    width: 380px;
+    flex-grow: 1;
+    height: 300px;
+    background: #fff;
+    clip-path: polygon(
+        0 45px,
+        45px 0,
+        100% 0,
+        100% calc(100% - 45px),
+        calc(100% - 45px) 100%,
+        0 100%,
+        0 45px
+    );
+    /* box-shadow: 0px 2px 2px -2px rgb(0, 0, 0, 20%),
+        0px 2px 2px 0px rgb(0, 0, 0, 14%), 0px 2px 4px 0px rgb(0, 0, 0, 12%); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    padding: 20px;
+    :hover {
+        filter: brightness(0.85);
+        cursor: pointer;
+    }
+
+    @media (max-width: 570px) {
+        width: 280px;
+    }
     ::before,
     ::after {
         position: absolute;
         content: "";
-        bottom: 0px;
-        height: 3px;
+        height: 4px;
         width: 0px;
         transition: all 500ms ease;
         -moz-transition: all 500ms ease;
@@ -136,12 +172,21 @@ export const StyledCard = styled(Card)`
     }
     ::before {
         left: 0px;
+        top: 0px;
     }
     ::after {
         right: 0px;
+        bottom: 0px;
     }
     :hover::before,
     :hover::after {
-        width: 50%;
+        width: 100%;
+    }
+
+    .changeColor {
+        color: black;
+    }
+    :hover .changeColor {
+        color: #3d4eaf;
     }
 `

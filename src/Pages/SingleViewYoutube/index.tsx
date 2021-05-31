@@ -129,7 +129,7 @@ const SingleBlogView: React.FC = () => {
                         <Text color="inheret">
                             {description.split("----//" || "Subscreva-se")[0]}
                         </Text>
-                        <h3 style={{ color: "#4d6f80", marginTop: 10 }}>
+                        <h3 style={{ color: "#4d6f80", marginTop: 15 }}>
                             {" "}
                             Siga as nossas páginas
                         </h3>

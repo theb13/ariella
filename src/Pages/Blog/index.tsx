@@ -79,7 +79,7 @@ const Blog: React.FC = () => {
         <Container style={{ marginTop: 20 }}>
             <h1>Noticias</h1>
             <Loader loading={loading} />
-            <Row flexWrap justifyContent="space-around">
+            <Row flexWrap justifyContent="space-around" style={{ gap: 20 }}>
                 {renderPosts()}
             </Row>
 
@@ -99,7 +99,7 @@ const Blog: React.FC = () => {
                 </Row>
             ) : null}
             <Title>Acompanhe o nosso canal</Title>
-            <Row flexWrap justifyContent="space-between">
+            <Row flexWrap justifyContent="space-between" style={{ gap: 20 }}>
                 {renderYoutubeCard()}
             </Row>
         </Container>

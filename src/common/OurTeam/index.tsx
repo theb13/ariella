@@ -1,32 +1,14 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
 
-import CardActionArea from "@material-ui/core/CardActionArea"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
-import Typography from "@material-ui/core/Typography"
-
-import { Button, Container } from "@material-ui/core"
+import { Container } from "@material-ui/core"
 import { OurTeamProps, ourTeamData as info } from "./data"
 import { Column, Title, StyledCard } from "../../styles"
 import ModalView from "../../Components/ModalView"
 import Carousel from "../../Components/Carousel"
 
-const useStyles = makeStyles({
-    root: {
-        width: 280,
-        minHeight: 280,
-        backgroundColor: "#F8F8F8",
-    },
-    media: {
-        height: 240,
-        overflow: "hidden",
-    },
-})
-
 const OurTeam: React.FC = () => {
-    const classes = useStyles()
     const [open, setOpen] = React.useState(false)
     const [person, setPerson] = React.useState<any>()
 
@@ -38,25 +20,16 @@ const OurTeam: React.FC = () => {
     function CardCreate(data: OurTeamProps) {
         const { img, name, office } = data
         return (
-            <StyledCard className={`${classes.root} overlay`}>
-                <CardActionArea>
-                    <CardMedia className={`${classes.media} media`}>
+            <StyledCard className="overlay" onClick={() => handleOpen(data)}>
+                <div>
+                    <div className="media">
                         <img src={img} alt="" width="280" />
-                    </CardMedia>
-                    <CardContent className="card-content">
-                        <Typography gutterBottom variant="h5" component="h3">
-                            {name}
-                        </Typography>
-                        <Typography variant="body2" component="h4">
-                            {office}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions onClick={() => handleOpen(data)}>
-                    <Button size="small" color="primary">
-                        Saber mais...
-                    </Button>
-                </CardActions>
+                    </div>
+                    <div className="card-content">
+                        <h3>{name}</h3>
+                        <h4>{office}</h4>
+                    </div>
+                </div>
             </StyledCard>
         )
     }

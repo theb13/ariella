@@ -52,7 +52,11 @@ const OurServices: React.FC<Props> = ({ studio }: Props) => {
                 Como parte da sua missão, a Ariella Boats & Services S.A.
                 oferece os seguintes serviços:
             </Text>
-            <Row flexWrap justifyContent="center">
+            <Row
+                flexWrap
+                justifyContent="center"
+                style={{ gap: 20, marginTop: 20 }}
+            >
                 {studio ? renderServicesStudio() : renderServices()}
             </Row>
             {service ? (
