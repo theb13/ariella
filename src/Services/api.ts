@@ -50,9 +50,9 @@ export const getYoutubeVideos = (videoID: string) => {
     })
 }
 export const getMedia = (author: number, offset: number) => {
-    let url = `${WP_JSON_API_LINK}media?author=${author}&per_page=10&page=${offset}`
+    let url = `${WP_JSON_API_LINK}media?author=${author}&per_page=24&page=${offset}`
     if (author === 0) {
-        url = `${WP_JSON_API_LINK}media?author_exclude=2&per_page=20&page=${offset}`
+        url = `${WP_JSON_API_LINK}media?author_exclude=2&per_page=24&page=${offset}`
     }
     return new Promise((resolve, reject) => {
         api.get(url)
