@@ -1,6 +1,5 @@
-export interface Post {
+export type Post = {
     author: string
-    comment_status: string
     content: { rendered: any; protected: boolean }
     date: string
     date_gmt: string
@@ -13,27 +12,35 @@ export interface Post {
     type: string
 }
 
-export interface Posts {
+export type PostGroup = {
+    author: string
+    id: number
+    views: number
+    featured_media_src_url: string
+    title: { rendered: string }
+}
+
+export type Posts = {
     posts: Post[]
 }
 
-export interface PropsModalBLog {
+export type PropsModalBLog = {
     title: string
     body: string
 }
 
-export interface Media {
+export type Media = {
     id: number
     author: string
     guid: { rendered: string }
     title: { rendered: string }
 }
 
-export interface Medias {
+export type Medias = {
     medias: Media[]
 }
 
-export interface ModalProps {
+export type ModalProps = {
     id: number
     name: string
     office: string
