@@ -14,15 +14,6 @@ const StyledCard = styled.div`
     height: 330px;
     background: #f8f8f8;
     border-radius: 0.4rem;
-    /* clip-path: polygon(
-        0 45px,
-        45px 0,
-        100% 0,
-        100% calc(100% - 45px),
-        calc(100% - 45px) 100%,
-        0 100%,
-        0 45px
-    ); */
     box-shadow: 0px 2px 2px -2px rgb(0, 0, 0, 20%),
         0px 2px 2px 0px rgb(0, 0, 0, 14%), 0px 2px 4px 0px rgb(0, 0, 0, 12%);
     .media {

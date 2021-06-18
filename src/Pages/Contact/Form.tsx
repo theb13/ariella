@@ -66,22 +66,24 @@ const Form: React.FC = () => {
     return (
         <>
             <Container>
-                <Row style={{ marginTop: 30 }}>
+                <Row justifyContent="center" style={{ marginTop: "6rem" }}>
                     <Title fontSize="2rem">Contacte-nos</Title>
                 </Row>
-                <Row>
+                <Row justifyContent="center">
                     <Title fontSize="1.2rem">
                         Tem alguma duvida ou questão?
                     </Title>
                 </Row>
-                <Text>
-                    Tem duas opções. Pode preencher o formulário abaixo e em
-                    menos de 24 horas a nossa equipa irá responder. Mas se
-                    preferir resposta em tempo real, no horário normal de
-                    expediente, pode entrar em contacto connosco ligando para um
-                    dos números ou vir aos nossos escritórios seguindo o
-                    endereço físico partilhado abaixo.
-                </Text>
+                <Row justifyContent="center">
+                    <Text>
+                        Tem duas opções. Pode preencher o formulário abaixo e em
+                        menos de 24 horas a nossa equipa irá responder. Mas se
+                        preferir resposta em tempo real, no horário normal de
+                        expediente, pode entrar em contacto connosco ligando
+                        para um dos números ou vir aos nossos escritórios
+                        seguindo o endereço físico partilhado abaixo.
+                    </Text>
+                </Row>
 
                 <Row justifyContent="center" alignItems="start" flexWrap>
                     <Column className="width">

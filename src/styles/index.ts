@@ -31,8 +31,7 @@ export const Text = styled.p`
     font-size: ${(props: Props) => props.fontSize || "1rem"};
     color: ${(props: Props) => props.color || "#5c8599"};
     font-weight: ${(props: Props) => props.fontWeight || "400"};
-    font-family: ${({ fontFamily }: Props) =>
-        fontFamily ? "Source Sans Pro" : "Nunito"};
+    font-family: "Nunito";
 `
 
 export const Input = styled.input`

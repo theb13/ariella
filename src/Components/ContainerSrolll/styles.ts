@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ContainerFooter = styled.div`
+export const ContainerFooter = styled.section`
     margin-top: 20px;
     padding: 20px 80px;
     min-height: 100px;
@@ -17,20 +17,6 @@ export const ContainerFooter = styled.div`
         padding: 20px 40px;
         > div {
             justify-content: center;
-        }
-    }
-`
-
-export const MediaMenu = styled.div`
-    @media (max-width: 768px) {
-        .menu {
-            display: none;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .menu-mobile {
-            display: none;
         }
     }
 `
