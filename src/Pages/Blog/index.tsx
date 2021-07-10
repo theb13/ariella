@@ -88,6 +88,7 @@ const Blog: React.FC = () => {
                     className="borderTop"
                     alignItems="center"
                     justifyContent="center"
+                    style={{ margin: "2rem 0" }}
                 >
                     <Button
                         variant="outlined"

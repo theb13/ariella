@@ -48,7 +48,7 @@ const StyledCard = styled.div`
 
 const StyledText = styled(Title)`
     overflow: hidden;
-    padding: 10px;
+
     text-overflow: ellipsis;
     color: #111;
     font-size: 1rem;
@@ -82,7 +82,9 @@ const PostCard: React.FC<Props> = ({ title, img, views, to }: Props) => {
                     <div className="media">
                         <img src={img} alt="" />
                     </div>
-                    <StyledText>{title}</StyledText>
+                    <div>
+                        <StyledText>{title}</StyledText>
+                    </div>
                 </div>
             </StyledCard>
         </Link>
