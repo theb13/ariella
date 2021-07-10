@@ -34,7 +34,8 @@ const StyledRow = styled(Row)`
         }
     }
     a {
-        color: #111;
+        color: #007bff;
+        text-decoration: underline;
     }
     p {
         margin: 10px !important;

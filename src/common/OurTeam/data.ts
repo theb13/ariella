@@ -1,10 +1,8 @@
 import Abdala from "../../assets/img_our_team/Abdala.jpg"
-import Amina from "../../assets/img_our_team/Amina.jpg"
 import Stelio from "../../assets/img_our_team/Stelio.jpg"
 import Herminia from "../../assets/img_our_team/Herminia.jpg"
 import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
 import Bernardo from "../../assets/img_our_team/Bernardo.jpg"
-import Dalton from "../../assets/img_our_team/Dalton.jpg"
 import Jen from "../../assets/img_our_team/Jennifer.jpg"
 
 export interface OurTeamProps {
@@ -68,19 +66,19 @@ export const ourTeamData = [
         referência na sua área de actuação. `,
         img: Abdala,
     },
-    {
-        id: 5,
-        name: "AMINA CHACAME",
-        office: "Oficial de Comunicação",
-        text: `Colaboradora da Ariella Boats E Services S.A. desde Janeiro de 2021,ocupa o cargo de Oficial de Comunicação.
-        Possui uma larga experiência na Comunicação Social, tendo colaborado para diferentes Órgãos de Informação como
-        repórter. Formada em Literatura Moçambicana pela Universidade Eduardo Mondlane, durante o processo de
-        formação, foi monitora na disciplina de Retórica e poética tendo adquirido competências comunicativas que em
-        muito contribuíram para o seu crescimento profissional. Possui cursos básicos de jornalismo televisivo e de técnicas
-        de apresentação. Amante de livros, acredita que pode tornar um mundo melhor aumentando o nível de literacia na
-        camada jovem. Espera contribuir para o crescimento da Ariella Boats e Services S.A.`,
-        img: Amina,
-    },
+    // {
+    //     id: 5,
+    //     name: "AMINA CHACAME",
+    //     office: "Oficial de Comunicação",
+    //     text: `Colaboradora da Ariella Boats E Services S.A. desde Janeiro de 2021,ocupa o cargo de Oficial de Comunicação.
+    //     Possui uma larga experiência na Comunicação Social, tendo colaborado para diferentes Órgãos de Informação como
+    //     repórter. Formada em Literatura Moçambicana pela Universidade Eduardo Mondlane, durante o processo de
+    //     formação, foi monitora na disciplina de Retórica e poética tendo adquirido competências comunicativas que em
+    //     muito contribuíram para o seu crescimento profissional. Possui cursos básicos de jornalismo televisivo e de técnicas
+    //     de apresentação. Amante de livros, acredita que pode tornar um mundo melhor aumentando o nível de literacia na
+    //     camada jovem. Espera contribuir para o crescimento da Ariella Boats e Services S.A.`,
+    //     img: Amina,
+    // },
     {
         id: 6,
         name: "STÉLIO CANGELA",
@@ -114,13 +112,13 @@ export const ourTeamData = [
         Negócios. Fora disso, Hermínia Chilaule tem habilidades na arte da maquilhagem e é apaixonada pelo canto.`,
         img: Herminia,
     },
-    {
-        id: 9,
-        name: "DALTON SITOE",
-        office: "Marketing digital",
-        text: `Está na Ariella Boats & Service desde Fevereiro de 2021, desempenhando a função de oficial de marketing digital. Trabalha com o mundo digital desde 2016, altura em que fundou a Revista Biografia, a primeira do género em Moçambique. É, ainda, webdesigner, e, explorando sua capacidade de criar e de inovar, fundou o site evangelístico Chave de Davi, em 2018; e a loja online O Ardina Digital, em 2020.
-        É, desde 2020, licenciado em jornalismo, pela Universidade Eduardo Mondlane (UEM), e é jornalista de profissão desde 2013, sendo, actualmente, editor executivo da Revista ÍDOLO, e correspondente da Revista Macau, órgão de comunicação baseado em Macau, na China. Por meio do seu amor pelas soluções digitais, redacção jornalística, e experiência nos dois ramos, espera impactar empresas e organizações da sociedade civil através da demonstração digital das soluções que a Ariella oferece.
-        `,
-        img: Dalton,
-    },
+    // {
+    //     id: 9,
+    //     name: "DALTON SITOE",
+    //     office: "Marketing digital",
+    //     text: `Está na Ariella Boats & Service desde Fevereiro de 2021, desempenhando a função de oficial de marketing digital. Trabalha com o mundo digital desde 2016, altura em que fundou a Revista Biografia, a primeira do género em Moçambique. É, ainda, webdesigner, e, explorando sua capacidade de criar e de inovar, fundou o site evangelístico Chave de Davi, em 2018; e a loja online O Ardina Digital, em 2020.
+    //     É, desde 2020, licenciado em jornalismo, pela Universidade Eduardo Mondlane (UEM), e é jornalista de profissão desde 2013, sendo, actualmente, editor executivo da Revista ÍDOLO, e correspondente da Revista Macau, órgão de comunicação baseado em Macau, na China. Por meio do seu amor pelas soluções digitais, redacção jornalística, e experiência nos dois ramos, espera impactar empresas e organizações da sociedade civil através da demonstração digital das soluções que a Ariella oferece.
+    //     `,
+    //     img: Dalton,
+    // },
 ] as OurTeamProps[]

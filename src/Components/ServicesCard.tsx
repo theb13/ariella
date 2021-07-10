@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react"
-
+import CreateIcon from "@material-ui/icons/CreateOutlined"
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined"
 import SearchIcon from "@material-ui/icons/Search"
-import CameraEnhanceOutlinedIcon from "@material-ui/icons/CameraEnhanceOutlined"
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount"
 import CameraIcon from "@material-ui/icons/Camera"
 import TvIcon from "@material-ui/icons/Tv"
@@ -48,7 +47,7 @@ const ServicesCard: React.FC<Props> = ({
                 )
             case 3:
                 return (
-                    <CameraEnhanceOutlinedIcon
+                    <CreateIcon
                         className="changeColor"
                         style={{ fontSize: 80 }}
                     />
