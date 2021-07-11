@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import { Container } from "@material-ui/core"
 import React, { useRef } from "react"
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 // import MenuIcon from "@material-ui/icons/Menu"
 
 import { Container as Nav } from "./styles"
@@ -19,19 +19,15 @@ const Menu: React.FC = () => {
     function handleButtonMenu() {
         refMenuButton.current?.addEventListener("click", toggleMenu)
     }
-    function handlerefCloseMenu(
-        event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-    ) {
-        refCloseMenu.current?.classList.remove("active")
-        event.currentTarget.classList.add("active")
-    }
 
     return (
         <Nav onBlur={removeActiveMenu}>
             <Container>
-                <Link id="logo" to="/">
-                    AriellaBoats
-                </Link>
+                <h1>
+                    <Link id="logo" to="/">
+                        AriellaBoats
+                    </Link>
+                </h1>
                 <nav id="nav" ref={refCloseMenu}>
                     <button
                         id="btn-mobile"
@@ -42,36 +38,16 @@ const Menu: React.FC = () => {
                     </button>
                     <ul id="menu" role="menu">
                         <li>
-                            <Link
-                                className="active"
-                                onClick={handlerefCloseMenu}
-                                to="/"
-                            >
-                                Home
-                            </Link>
+                            <NavLink to="/ariellaStudio">AriellaStudio</NavLink>
                         </li>
                         <li>
-                            <Link
-                                onClick={handlerefCloseMenu}
-                                to="/ariellaStudio"
-                            >
-                                AriellaStudio
-                            </Link>
+                            <NavLink to="/contact">Contacto</NavLink>
                         </li>
                         <li>
-                            <Link onClick={handlerefCloseMenu} to="/contact">
-                                Contacto
-                            </Link>
+                            <NavLink to="/blog">Notícias</NavLink>
                         </li>
                         <li>
-                            <Link onClick={handlerefCloseMenu} to="/blog">
-                                Notícias
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={handlerefCloseMenu} to="/about">
-                                Sobre nós
-                            </Link>
+                            <NavLink to="/about">Sobre nós</NavLink>
                         </li>
                     </ul>
                 </nav>

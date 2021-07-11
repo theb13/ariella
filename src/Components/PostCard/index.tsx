@@ -39,7 +39,7 @@ const StyledCard = styled.div`
 
 const StyledText = styled(Title)`
     overflow: hidden;
-    padding: 10px;
+    margin: 1rem;
     text-overflow: ellipsis;
     color: #111;
     font-size: 1rem;
@@ -51,7 +51,6 @@ const StyledText = styled(Title)`
 interface Props {
     title: string
     img: string
-    // eslint-disable-next-line react/require-default-props
     views?: number
     to: string
 }

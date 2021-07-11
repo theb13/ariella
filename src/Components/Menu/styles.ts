@@ -9,6 +9,7 @@ export const Container = styled.header`
     z-index: 100;
     width: 100%;
     height: 4rem;
+
     > div {
         display: flex;
         align-items: center;
@@ -17,8 +18,12 @@ export const Container = styled.header`
     a {
         color: #fff;
         font-size: 1rem;
+        font-weight: 600;
+        margin-right: 0.9rem;
+        filter: brightness(0.9);
         &.active {
             border-bottom: 2px solid #03a9f4;
+            filter: brightness(1);
         }
     }
 
@@ -27,8 +32,9 @@ export const Container = styled.header`
     }
 
     #logo {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         font-weight: bold;
+        filter: brightness(1);
     }
 
     #menu {

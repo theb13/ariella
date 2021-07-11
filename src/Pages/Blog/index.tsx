@@ -3,18 +3,14 @@ import React, { useEffect, useState } from "react"
 import Loader from "../../Components/Loader"
 import PostCard from "../../Components/PostCard"
 import { useApiContext } from "../../Context/ApiContext"
-import { PostGroup } from "../../helpers/types"
-import { getPosts, getYoutubeVideos } from "../../Services/api"
+import { getYoutubeVideos } from "../../Services/api"
 import { Row, Title } from "../../styles"
 
 const Blog: React.FC = () => {
-    const { postList, getPostList } = useApiContext()
-    const one = 1
-    const [loading, setLoading] = useState(true)
+    const { postList, loading, offset, setOffset } = useApiContext()
     const [playList, setPlaylist] = useState([])
-    const [offset, setOffset] = useState<number>(1)
+
     useEffect(() => {
-        setLoading(true)
         getYoutubeVideos("")
             .then((values: any) => {
                 setPlaylist(values.items)
@@ -23,27 +19,12 @@ const Blog: React.FC = () => {
             .catch((err) => {
                 // console.log(err)
             })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [one])
-
-    useEffect(() => {
-        getPosts(1)
-            .then((values: any) => {
-                getPostList(values)
-            })
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            .catch((err) => {
-                // eslint-disable-next-line no-console
-                console.log(err)
-            })
             .finally(() => {})
-    }, [offset])
+    })
 
     function renderPosts() {
         if (postList.length < 1) return null
-        return postList.map((post: PostGroup) => {
+        return postList.map((post) => {
             return (
                 <PostCard
                     key={`${post.id}-${Math.random()}`}
@@ -85,6 +66,7 @@ const Blog: React.FC = () => {
                     className="borderTop"
                     alignItems="center"
                     justifyContent="center"
+                    style={{ margin: "1rem 0" }}
                 >
                     <Button
                         variant="outlined"
