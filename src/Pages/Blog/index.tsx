@@ -2,19 +2,15 @@ import { Button, Container } from "@material-ui/core"
 import React, { useEffect, useState } from "react"
 import Loader from "../../Components/Loader"
 import PostCard from "../../Components/PostCard"
-import { Post } from "../../helpers/types"
-import { getPosts, getYoutubeVideos } from "../../Services/api"
+import { useApiContext } from "../../Context/ApiContext"
+import { getYoutubeVideos } from "../../Services/api"
 import { Row, Title } from "../../styles"
 
 const Blog: React.FC = () => {
-    const one = 1
-    const [loading, setLoading] = useState(true)
-    const [posts, setPosts] = useState([])
+    const { postList, loading, offset, setOffset } = useApiContext()
     const [playList, setPlaylist] = useState([])
-    const [offset, setOffset] = useState<number>(1)
 
     useEffect(() => {
-        setLoading(true)
         getYoutubeVideos("")
             .then((values: any) => {
                 setPlaylist(values.items)
@@ -23,33 +19,15 @@ const Blog: React.FC = () => {
             .catch((err) => {
                 // console.log(err)
             })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [one])
-    useEffect(() => {
-        setLoading(true)
-        getPosts(offset)
-            .then((values: any) => {
-                const data = posts.concat(values)
-                setPosts(data)
-            })
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            .catch((err) => {
-                // eslint-disable-next-line no-console
-                console.log(err)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [offset])
+            .finally(() => {})
+    })
 
     function renderPosts() {
-        if (posts.length < 1) return null
-        return posts.map((post: Post) => {
+        if (postList.length < 1) return null
+        return postList.map((post) => {
             return (
                 <PostCard
-                    key={`${post.date}-${Math.random() * 30}`}
+                    key={`${post.id}-${Math.random()}`}
                     title={post.title.rendered}
                     img={post.featured_media_src_url}
                     to={`blog/${post.id}`}
@@ -66,7 +44,7 @@ const Blog: React.FC = () => {
             const { videoId } = id
             return (
                 <PostCard
-                    key={id}
+                    key={`${videoId}-${Math.random()}`}
                     title={title}
                     img={high.url}
                     to={`youtube/${videoId}`}
@@ -83,12 +61,16 @@ const Blog: React.FC = () => {
                 {renderPosts()}
             </Row>
 
-            {posts.length > 0 ? (
+            {postList.length > 0 ? (
                 <Row
                     className="borderTop"
                     alignItems="center"
                     justifyContent="center"
+<<<<<<< HEAD
                     style={{ margin: "2rem 0" }}
+=======
+                    style={{ margin: "1rem 0" }}
+>>>>>>> contextApi
                 >
                     <Button
                         variant="outlined"

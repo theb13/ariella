@@ -81,7 +81,11 @@ const ServicesCard: React.FC<Props> = ({
                     <div>{renderIcon(icon)}</div>
                     <div>
                         <Title color="#111">{title}</Title>
-                        <Text fontFamily fontWeight="300" color="#000">
+                        <Text
+                            style={{ fontFamily: "Source Sans Pro" }}
+                            fontWeight="300"
+                            color="#000"
+                        >
                             {resumeDescription(text)}
                         </Text>
                     </div>

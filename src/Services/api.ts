@@ -1,20 +1,20 @@
 import axios from "axios"
-import { Medias, Posts } from "../helpers/types"
+import { Medias, PostGroup, Posts } from "../helpers/types"
 
 const allowedFieldsPost =
     "author,id,title,views,featured_media,featured_media_src_url,img_url"
-const api = axios.create({
+export const api = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
     timeout: 10000,
 })
 const WP_JSON_API_LINK = "wp-json/wp/v2/"
 export const getPosts = (offset: number) =>
-    new Promise((resolve, reject) => {
+    new Promise<PostGroup[]>((resolve, reject) => {
         api.get(
             `wp-json/wp/v2/posts?_fields=${allowedFieldsPost}&per_page=6&page=${offset}`
         )
             .then((response) => {
-                resolve(response.data as Posts)
+                resolve(response.data as PostGroup[])
             })
             .catch((err) => {
                 reject(err)
