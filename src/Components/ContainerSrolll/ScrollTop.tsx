@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 
 import styled from "styled-components"
@@ -24,12 +24,12 @@ export const Button = styled.button`
 `
 
 const ScrollTop: React.FC = () => {
-    useEffect(() => {
-        console.log(window.onscroll)
-    }, [])
+    function goToTop() {
+        window.scrollTo(0, 0)
+    }
 
     return (
-        <Button>
+        <Button onClick={goToTop}>
             <KeyboardArrowUpIcon />
         </Button>
     )
