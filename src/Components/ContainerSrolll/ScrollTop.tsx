@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
-
 import styled from "styled-components"
+import { useWindowScroll } from "react-use"
 
 export const Button = styled.button`
-    /* display: none; */
-    text-align: center;
+    /* text-align: center; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
     width: 2.8rem;
     height: 2.8rem;
     position: fixed;
@@ -21,15 +23,23 @@ export const Button = styled.button`
     :hover {
         filter: brightness(0.9);
     }
+    &.hidden {
+        display: none;
+    }
 `
 
 const ScrollTop: React.FC = () => {
-    function goToTop() {
-        window.scrollTo(0, 0)
-    }
+    const { y: pageOffset } = useWindowScroll()
+    const [visibility, setVisibility] = useState(false)
+    useEffect(() => {
+        if (pageOffset > 400) setVisibility(true)
+        else setVisibility(false)
+    }, [pageOffset])
+
+    const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
 
     return (
-        <Button onClick={goToTop}>
+        <Button className={`${visibility ? "" : "hidden"}`} onClick={scrollTop}>
             <KeyboardArrowUpIcon />
         </Button>
     )
