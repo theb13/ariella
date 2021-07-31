@@ -5,6 +5,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import YouTubeIcon from "@material-ui/icons/YouTube"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import TwitterIcon from "@material-ui/icons/Twitter"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import { ContainerFooter } from "./styles"
 import { Row, Column, Text } from "../../styles"
 
@@ -31,14 +32,20 @@ const Footer: React.FC = () => {
                     </Column>
                 </Row>
                 <Row justifyContent="space-around">
-                    <a target="blank" href="https://twitter.com/AriellaBoats">
-                        <TwitterIcon style={{ color: "#2AA9E0" }} />
+                    <a
+                        target="blank"
+                        href="https://www.linkedin.com/in/ariella-boats-8492051a6/"
+                    >
+                        <LinkedInIcon style={{ color: "#0074B4" }} />
                     </a>
                     <a
                         target="blank"
                         href="https://www.facebook.com/Ariella-Boats-105606138175180"
                     >
                         <FacebookIcon style={{ color: "#007BFF" }} />
+                    </a>
+                    <a target="blank" href="https://twitter.com/AriellaBoats">
+                        <TwitterIcon style={{ color: "#2AA9E0" }} />
                     </a>
                     <a
                         target="blank"
@@ -57,7 +64,15 @@ const Footer: React.FC = () => {
             <Column>
                 <Row justifyContent="center">
                     <Text color="#FFF">
-                        © 2020 Todos Direitos Reservados à AriellaBoats.
+                        © 2020 Todos Direitos Reservados à AriellaBoats |
+                        Powered by
+                        <a
+                            href="https://www.theb.co.mz"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            TheB
+                        </a>
                     </Text>
                 </Row>
             </Column>

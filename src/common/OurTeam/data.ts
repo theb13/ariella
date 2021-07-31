@@ -4,6 +4,7 @@ import Herminia from "../../assets/img_our_team/Herminia.jpg"
 import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
 import Bernardo from "../../assets/img_our_team/Bernardo.jpg"
 import Jen from "../../assets/img_our_team/Jennifer.jpg"
+import Jana from "../../assets/img_our_team/Jana.jpeg"
 
 export interface OurTeamProps {
     id: number
@@ -66,19 +67,16 @@ export const ourTeamData = [
         referência na sua área de actuação. `,
         img: Abdala,
     },
-    // {
-    //     id: 5,
-    //     name: "AMINA CHACAME",
-    //     office: "Oficial de Comunicação",
-    //     text: `Colaboradora da Ariella Boats E Services S.A. desde Janeiro de 2021,ocupa o cargo de Oficial de Comunicação.
-    //     Possui uma larga experiência na Comunicação Social, tendo colaborado para diferentes Órgãos de Informação como
-    //     repórter. Formada em Literatura Moçambicana pela Universidade Eduardo Mondlane, durante o processo de
-    //     formação, foi monitora na disciplina de Retórica e poética tendo adquirido competências comunicativas que em
-    //     muito contribuíram para o seu crescimento profissional. Possui cursos básicos de jornalismo televisivo e de técnicas
-    //     de apresentação. Amante de livros, acredita que pode tornar um mundo melhor aumentando o nível de literacia na
-    //     camada jovem. Espera contribuir para o crescimento da Ariella Boats e Services S.A.`,
-    //     img: Amina,
-    // },
+    {
+        id: 5,
+        name: "JANAINA BENILDE DE NORONHA",
+        office: "Técnica Jurídica",
+        text: `Janaína De Noronha é Técnica Jurídica na Ariella Boats & Services, S.A., desde o mês de Fevereiro de 2021. É formada em Direito pela Universidade São Tomás de Moçambique.
+        Antes de se juntar a Ariella estagiou no Instituto de Patrocínio e Assistência Jurídica (IPAJ), onde teve o privilégio de lidar com algumas áreas do Direito (Cível, criminal, família, sucessões, laboral, comercial, entre outras), ajudando cidadãos carenciados na resolução dos seus conflitos. Já advogou diversas vezes em Tribunal.
+        Sempre teve paixão pela leitura,  e pelo Direito.
+        Pretende deste modo crescer profissionalmente na sua carreira, não só, mas também, contribuir para o crescimento desta Instituição.`,
+        img: Jana,
+    },
     {
         id: 6,
         name: "STÉLIO CANGELA",
