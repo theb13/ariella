@@ -39,11 +39,7 @@ const StyledCard = styled.div`
 
 const StyledText = styled(Title)`
     overflow: hidden;
-<<<<<<< HEAD
-
-=======
     margin: 1rem;
->>>>>>> contextApi
     text-overflow: ellipsis;
     color: #111;
     font-size: 1rem;

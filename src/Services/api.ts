@@ -8,7 +8,10 @@ export const api = axios.create({
     timeout: 10000,
 })
 const WP_JSON_API_LINK = "wp-json/wp/v2/"
-export const getPosts = (offset: number) =>
+export const getPosts = (
+    offset: number,
+    setLoading: (value: boolean) => void
+) =>
     new Promise<PostGroup[]>((resolve, reject) => {
         api.get(
             `wp-json/wp/v2/posts?_fields=${allowedFieldsPost}&per_page=6&page=${offset}`
@@ -18,6 +21,9 @@ export const getPosts = (offset: number) =>
             })
             .catch((err) => {
                 reject(err)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     })
 export const getSinglePost = (id: number) =>

@@ -8,10 +8,11 @@ import React, {
     useState,
 } from "react"
 import { Media, PostGroup } from "../helpers/types"
-import { getPosts } from "../Services/api"
+import { getPosts, getYoutubeVideos } from "../Services/api"
 
 type ApiContextData = {
     postList: PostGroup[]
+    youtubePlayList: any
     mediaList: Media[]
     loading: boolean
     offset: number
@@ -32,22 +33,33 @@ export const ApiContextProvider = ({ children }: Props) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [mediaList, setmediaList] = useState([])
 
+    const [youtubePlayList, setYoutubePlayList] = useState([])
+
     async function getPostList() {
         setLoading(true)
-        const data = await getPosts(offset)
+        const data = await getPosts(offset, setLoading)
         setPostList([...postList, ...data])
-        setLoading(false)
+    }
+    async function getYoutubePlayList() {
+        const data = (await getYoutubeVideos("")) as any
+        setYoutubePlayList(data)
     }
 
     useEffect(() => {
         getPostList()
     }, [offset])
+
+    useEffect(() => {
+        getYoutubePlayList()
+    })
+
     return (
         <ApiContext.Provider
             value={{
                 postList,
-                mediaList,
                 getPostList,
+                mediaList,
+                youtubePlayList,
                 loading,
                 offset,
                 setOffset,

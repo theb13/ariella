@@ -1,26 +1,18 @@
 import { Button, Container } from "@material-ui/core"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Loader from "../../Components/Loader"
 import PostCard from "../../Components/PostCard"
 import { useApiContext } from "../../Context/ApiContext"
-import { getYoutubeVideos } from "../../Services/api"
 import { Row, Title } from "../../styles"
 
 const Blog: React.FC = () => {
-    const { postList, loading, offset, setOffset } = useApiContext()
-    const [playList, setPlaylist] = useState([])
-
-    useEffect(() => {
-        getYoutubeVideos("")
-            .then((values: any) => {
-                setPlaylist(values.items)
-            })
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            .catch((err) => {
-                // console.log(err)
-            })
-            .finally(() => {})
-    })
+    const {
+        postList,
+        loading,
+        offset,
+        setOffset,
+        youtubePlayList,
+    } = useApiContext()
 
     function renderPosts() {
         if (postList.length < 1) return null
@@ -37,8 +29,8 @@ const Blog: React.FC = () => {
         })
     }
     function renderYoutubeCard() {
-        if (playList.length < 1) return null
-        return playList.map(({ id, snippet }: any) => {
+        if (youtubePlayList.length < 1) return null
+        return youtubePlayList.map(({ id, snippet }: any) => {
             const { title, thumbnails = {} } = snippet
             const { high } = thumbnails
             const { videoId } = id
@@ -66,11 +58,7 @@ const Blog: React.FC = () => {
                     className="borderTop"
                     alignItems="center"
                     justifyContent="center"
-<<<<<<< HEAD
                     style={{ margin: "2rem 0" }}
-=======
-                    style={{ margin: "1rem 0" }}
->>>>>>> contextApi
                 >
                     <Button
                         variant="outlined"
