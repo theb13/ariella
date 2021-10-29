@@ -20,7 +20,11 @@ const OurTeam: React.FC = () => {
     function CardCreate(data: OurTeamProps) {
         const { img, name, office } = data
         return (
-            <StyledCard className="overlay" onClick={() => handleOpen(data)}>
+            <StyledCard
+                className="overlay"
+                style={{ background: "#000" }}
+                onClick={() => handleOpen(data)}
+            >
                 <div>
                     <div className="media">
                         <img src={img} alt="" width="280" />

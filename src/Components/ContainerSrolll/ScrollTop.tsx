@@ -12,7 +12,7 @@ export const Button = styled.button`
     height: 2.8rem;
     position: fixed;
     bottom: 1.4rem;
-    right: 0.9rem;
+    right: 1.2rem;
     z-index: 99;
     border: none;
     outline: none;

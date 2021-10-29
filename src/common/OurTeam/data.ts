@@ -1,10 +1,11 @@
 import Abdala from "../../assets/img_our_team/Abdala.jpg"
 import Stelio from "../../assets/img_our_team/Stelio.jpg"
-import Herminia from "../../assets/img_our_team/Herminia.jpg"
-import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
+// import Arsenio from "../../assets/img_our_team/Arsenio.jpg"
 import Bernardo from "../../assets/img_our_team/Bernardo.jpg"
+import Bila from "../../assets/img_our_team/Bila.png"
+import Chavane from "../../assets/img_our_team/Chavane.jpg"
 import Jen from "../../assets/img_our_team/Jennifer.jpg"
-import Jana from "../../assets/img_our_team/Jana.jpeg"
+// import Jana from "../../assets/img_our_team/Jana.jpeg"
 
 export interface OurTeamProps {
     id: number
@@ -15,21 +16,21 @@ export interface OurTeamProps {
 }
 
 export const ourTeamData = [
-    {
-        id: 1,
-        name: "ARSÉNIO MANHICE",
-        office: "PCA",
+    // {
+    //     id: 1,
+    //     name: "ARSÉNIO MANHICE",
+    //     office: "PCA",
 
-        text: `É Presidente do Conselho de Administração (PCA) da Ariella Boats & Services S.A. desde a sua constituição. Antes
-        de se juntar à Ariella, Manhice foi Especialista Sénior de Advocacia na Counterpart International, uma ONG
-        americana. Na sua carreira já trabalhou para IREX International, Elizabeth Glaser e Sociedade do Notícias.
-         Arsenio Manhice é docente nas Universidade São Tomás de Moçambique e Instituto Superior de Comunicação e
-        Imagem. Possui diversas publicações feitas na sua qualidade de consultor. Sua formação acadêmica passa pela
-        Escola de Jornalismo onde formau se em Jornalismo e, de seguida fez Direito na Universidade Eduardo Mondlane.
-        Seu maior sonho é tornar Ariella uma empresa de referência na assitência técnica à
-        empresas e organizações de sociedade civil.`,
-        img: Arsenio,
-    },
+    //     text: `É Presidente do Conselho de Administração (PCA) da Ariella Boats & Services S.A. desde a sua constituição. Antes
+    //     de se juntar à Ariella, Manhice foi Especialista Sénior de Advocacia na Counterpart International, uma ONG
+    //     americana. Na sua carreira já trabalhou para IREX International, Elizabeth Glaser e Sociedade do Notícias.
+    //      Arsenio Manhice é docente nas Universidade São Tomás de Moçambique e Instituto Superior de Comunicação e
+    //     Imagem. Possui diversas publicações feitas na sua qualidade de consultor. Sua formação acadêmica passa pela
+    //     Escola de Jornalismo onde formau se em Jornalismo e, de seguida fez Direito na Universidade Eduardo Mondlane.
+    //     Seu maior sonho é tornar Ariella uma empresa de referência na assitência técnica à
+    //     empresas e organizações de sociedade civil.`,
+    //     img: Arsenio,
+    // },
     // {
     //     id: 2,
     //     name: "RITA MANHICE",
@@ -67,16 +68,16 @@ export const ourTeamData = [
         referência na sua área de actuação. `,
         img: Abdala,
     },
-    {
-        id: 5,
-        name: "JANAINA BENILDE DE NORONHA",
-        office: "Técnica Jurídica",
-        text: `Janaína De Noronha é Técnica Jurídica na Ariella Boats & Services, S.A., desde o mês de Fevereiro de 2021. É formada em Direito pela Universidade São Tomás de Moçambique.
-        Antes de se juntar a Ariella estagiou no Instituto de Patrocínio e Assistência Jurídica (IPAJ), onde teve o privilégio de lidar com algumas áreas do Direito (Cível, criminal, família, sucessões, laboral, comercial, entre outras), ajudando cidadãos carenciados na resolução dos seus conflitos. Já advogou diversas vezes em Tribunal.
-        Sempre teve paixão pela leitura,  e pelo Direito.
-        Pretende deste modo crescer profissionalmente na sua carreira, não só, mas também, contribuir para o crescimento desta Instituição.`,
-        img: Jana,
-    },
+    // {
+    //     id: 5,
+    //     name: "JANAINA BENILDE DE NORONHA",
+    //     office: "Técnica Jurídica",
+    //     text: `Janaína De Noronha é Técnica Jurídica na Ariella Boats & Services, S.A., desde o mês de Fevereiro de 2021. É formada em Direito pela Universidade São Tomás de Moçambique.
+    //     Antes de se juntar a Ariella estagiou no Instituto de Patrocínio e Assistência Jurídica (IPAJ), onde teve o privilégio de lidar com algumas áreas do Direito (Cível, criminal, família, sucessões, laboral, comercial, entre outras), ajudando cidadãos carenciados na resolução dos seus conflitos. Já advogou diversas vezes em Tribunal.
+    //     Sempre teve paixão pela leitura,  e pelo Direito.
+    //     Pretende deste modo crescer profissionalmente na sua carreira, não só, mas também, contribuir para o crescimento desta Instituição.`,
+    //     img: Jana,
+    // },
     {
         id: 6,
         name: "STÉLIO CANGELA",
@@ -101,15 +102,40 @@ export const ourTeamData = [
     },
     {
         id: 8,
-        name: "HERMÍNIA CHILAULE",
-        office: "Assitente de Administração de Negócios",
-        text: `É assistente de Administração de Negócios na Ariella Boats & Services S. A. Hermínia é formada em
-        Economia pela Universidade de Goa, na Índia, onde teve também a oportunidade de participar de um estágio, durante
-        um mês, como Assistente de Negócios numa empresa que se dedica a poupança e investimentos. Embora o seu
-        maior sonho seja de se tornar em uma gestora de empresa própria ou não, a sua especialidade é Economia e
-        Negócios. Fora disso, Hermínia Chilaule tem habilidades na arte da maquilhagem e é apaixonada pelo canto.`,
-        img: Herminia,
+        name: "António Mário Chavane",
+        office: " Graphic Designer",
+        text: `É colaborador da Ariella Boats & Services S.A, onde trabalha como Graphic Designer. Formado pelo Instituto Superior
+            de Arte e Cultura (ISArC), na sua carreira profissional desempenhou funções similares nem várias empresas que lidam
+            com comunicação e marketing. Individualmente, Chavane tem feito trabalhos de design de comunicação marketing
+            digitalsempre procuro pesquisar, apreender novas técnica e pratica-las cada vez mais, Interajo com profissionais da
+            área com vista a busca experiência e novos conhecimentos. Locução faz parte das suas habilidade, que por via desta
+            tem feito numa rádio dentro da cidade de Maputo. Tem tambem uma paixões enorme pela a arte de lecionar, onde
+            buscou uma formação de caracter pedagogo como forma de alimentar a sua paixão, essa formação contribui no seu
+            cotidiano pois tem dado pequenas formações ou orientações
+            `,
+        img: Chavane,
     },
+    {
+        id: 9,
+        name: "Januário Bila",
+        office: "Fotógrafo Profissional",
+        text: `É Fotógrafo Profissional na Ariella Boats & Services, S.A. No seu currículo, Bila conta com uma formação em
+            fotografia e filmagem. Para além de fotografias, na sua carrega já trabalhou e continua a desenvolver actividades
+            como designer gráfico e Programador Web, tendo já colaborado para várias organizações.
+        `,
+        img: Bila,
+    },
+    // {
+    //     id: 8,
+    //     name: "HERMÍNIA CHILAULE",
+    //     office: "Assitente de Administração de Negócios",
+    //     text: `É assistente de Administração de Negócios na Ariella Boats & Services S. A. Hermínia é formada em
+    //     Economia pela Universidade de Goa, na Índia, onde teve também a oportunidade de participar de um estágio, durante
+    //     um mês, como Assistente de Negócios numa empresa que se dedica a poupança e investimentos. Embora o seu
+    //     maior sonho seja de se tornar em uma gestora de empresa própria ou não, a sua especialidade é Economia e
+    //     Negócios. Fora disso, Hermínia Chilaule tem habilidades na arte da maquilhagem e é apaixonada pelo canto.`,
+    //     img: Herminia,
+    // },
     // {
     //     id: 9,
     //     name: "DALTON SITOE",

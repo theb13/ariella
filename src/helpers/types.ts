@@ -15,6 +15,7 @@ export type Post = {
 export type PostGroup = {
     author: string
     id: number
+    content: { rendered: any; protected: boolean }
     views: number
     featured_media_src_url: string
     title: { rendered: string }
@@ -48,4 +49,43 @@ export type ModalProps = {
     title: string
     icon: any
     img: string
+}
+
+export interface YoutubeType {
+    items: Item[]
+}
+
+export interface Item {
+    kind: string
+    etag: string
+    id: ID
+    snippet: Snippet
+}
+
+interface ID {
+    kind: string
+    videoId: string
+}
+
+interface Snippet {
+    publishedAt: string
+    channelId: string
+    title: string
+    description: string
+    thumbnails: Thumbnails
+    channelTitle: string
+    liveBroadcastContent: string
+    publishTime: string
+}
+
+interface Thumbnails {
+    default: Default
+    medium: Default
+    high: Default
+}
+
+interface Default {
+    url: string
+    width: number
+    height: number
 }

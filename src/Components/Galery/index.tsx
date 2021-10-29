@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-plusplus */
 import React, { useState } from "react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 import { Column } from "../../styles"
 
 import { Container } from "./styles"
@@ -108,7 +110,13 @@ const Galery: React.FC<Props> = ({ medias, view }: Props) => {
                         key={med.guid.rendered + Math.random()}
                         onClick={() => handleOpen(med.guid.rendered)}
                     >
-                        <img src={med.guid.rendered} alt="imagem" />
+                        <LazyLoadImage
+                            src={med.guid.rendered}
+                            alt="imagem"
+                            effect="blur"
+                            width="200px"
+                            height="200px"
+                        />
                     </div>
                 ))}
             </div>

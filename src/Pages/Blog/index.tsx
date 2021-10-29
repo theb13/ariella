@@ -30,15 +30,13 @@ const Blog: React.FC = () => {
     }
     function renderYoutubeCard() {
         if (youtubePlayList.length < 1) return null
-        return youtubePlayList.map(({ id, snippet }: any) => {
-            const { title, thumbnails = {} } = snippet
-            const { high } = thumbnails
+        return youtubePlayList.map(({ id, snippet }) => {
             const { videoId } = id
             return (
                 <PostCard
                     key={`${videoId}-${Math.random()}`}
-                    title={title}
-                    img={high.url}
+                    title={snippet.title}
+                    img={snippet.thumbnails.high.url}
                     to={`youtube/${videoId}`}
                 />
             )

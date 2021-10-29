@@ -1,8 +1,8 @@
 import axios from "axios"
-import { Medias, PostGroup, Posts } from "../helpers/types"
+import { Medias, PostGroup, Posts, YoutubeType } from "../helpers/types"
 
 const allowedFieldsPost =
-    "author,id,title,views,featured_media,featured_media_src_url,img_url"
+    "author,id,title,views,content,featured_media,featured_media_src_url,img_url"
 export const api = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
     timeout: 10000,
@@ -43,12 +43,12 @@ export const getYoutubeVideos = (videoID: string) => {
         url = "playlistItems"
     }
     const YOUTUBE_API_LINK = `https://www.googleapis.com/youtube/v3/${url}?key=${process.env.REACT_APP_API_GOOGLE}&part=snippet`
-    return new Promise((resolve, reject) => {
+    return new Promise<YoutubeType>((resolve, reject) => {
         api.get(
             `${YOUTUBE_API_LINK}&order=date&videoId=${videoID}&maxResults=9&playlistId=PL-As4Eo2YksHrCRElwSAACvqVPYpAxTqa&channelId=UCnZHU_FI3CQx3B1bg2ttscg`
         )
             .then((response) => {
-                resolve(response.data)
+                resolve(response.data as YoutubeType)
             })
             .catch((err) => {
                 reject(err)

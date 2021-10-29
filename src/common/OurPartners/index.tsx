@@ -17,11 +17,17 @@ const OurTeam: React.FC = () => {
                             key={item.id}
                             style={{ height: 220 }}
                         >
-                            <img
-                                src={item.img}
-                                alt=""
-                                style={{ width: 200, height: "auto" }}
-                            />
+                            <div style={{ width: 200, height: 180 }}>
+                                <img
+                                    src={item.img}
+                                    alt="logo"
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "contain",
+                                    }}
+                                />
+                            </div>
                         </Column>
                     ))}
                 </Carousel>

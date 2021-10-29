@@ -4,14 +4,15 @@ import OurPartners from "../../common/OurPartners"
 import OurServices from "../../common/OurServices"
 import OurTeam from "../../common/OurTeam"
 import Overview from "../../common/Overview"
-import Banner from "../../Components/Banner"
+// import Banner from "../../Components/Banner"
 import { Padding } from "../../styles"
 import HotInfo from "./HotInfo"
+import SliderShow from "./SliderShow"
 
 const Home: React.FC = () => {
     return (
         <main>
-            <Banner />
+            <SliderShow />
             <Padding id="view" background>
                 <Overview />
             </Padding>

@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                         © 2020 Todos Direitos Reservados à AriellaBoats |
                         Powered by
                         <a
-                            href="https://www.theb.co.mz"
+                            href="https://bernardo.ejitech.co.mz/"
                             target="_blank"
                             rel="noreferrer"
                         >
