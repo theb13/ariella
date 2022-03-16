@@ -25,7 +25,8 @@ const Menu: React.FC = () => {
             <Container>
                 <h1>
                     <Link id="logo" to="/">
-                        AriellaBoats
+                        <span style={{ color: "#0074B4" }}>Ariella</span>
+                        <span style={{ color: "#FDB52D" }}>Group</span>
                     </Link>
                 </h1>
                 <nav id="nav" ref={refCloseMenu}>

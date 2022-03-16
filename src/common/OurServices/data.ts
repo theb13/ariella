@@ -13,7 +13,7 @@ export interface OurServicesProps {
 export const ourServicesData = [
     {
         title: "Assistência técnica especializada",
-        text: `Temos uma equipa preparada para elaboração de documentos estratégicos de empresas, instituições ou organizações. Nos dias de hoje não dá mais para “caminhar tacteando”, e Ariella Boats auxilia a sua organização a delinear estratégias claras para abordar a caminhada rumo aos seus objectivos. Ainda neste âmbito, Ariella faz pesquisas e organiza eventos públicos. Ariella dá, ainda, assistência na realização de Webniarsʼs (seminários através de internet) combinando ferramentas de comunicação como Youtube, Facebook, Instagram, Zoom, Teams, Skype, entre outras.
+        text: `Temos uma equipa preparada para elaboração de documentos estratégicos de empresas, instituições ou organizações. Nos dias de hoje não dá mais para “caminhar tacteando”, e Ariella Group auxilia a sua organização a delinear estratégias claras para abordar a caminhada rumo aos seus objectivos. Ainda neste âmbito, Ariella faz pesquisas e organiza eventos públicos. Ariella dá, ainda, assistência na realização de Webniarsʼs (seminários através de internet) combinando ferramentas de comunicação como Youtube, Facebook, Instagram, Zoom, Teams, Skype, entre outras.
         `,
         icon: 1,
     },

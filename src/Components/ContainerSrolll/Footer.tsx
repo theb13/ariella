@@ -23,11 +23,11 @@ const Footer: React.FC = () => {
                     </Column>
                     <Column alignItems="center">
                         <MailOutlineIcon style={{ color: "#164B94" }} />{" "}
-                        <a href="mailto:info@ariellaboats.com">
-                            info@ariellaboats.com
+                        <a href="mailto:info@ariellagroup.co.mz">
+                            info@ariellagroup.co.mz
                         </a>
-                        <a href="mailto:ariellaboats@gmail.com">
-                            ariellaboats@gmail.com
+                        <a href="mailto: ariellagroupsa@gmail.com">
+                            ariellagroupsa@gmail.com
                         </a>
                     </Column>
                 </Row>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <Column>
                 <Row justifyContent="center">
                     <Text color="#FFF">
-                        © 2020 Todos Direitos Reservados à AriellaBoats |
+                        © 2020 Todos Direitos Reservados à AriellaGroup |
                         Powered by
                         <a
                             href="https://bernardo.ejitech.co.mz/"

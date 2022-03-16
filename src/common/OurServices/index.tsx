@@ -49,8 +49,8 @@ const OurServices: React.FC<Props> = ({ studio }: Props) => {
         <Column alignItems="center">
             <Title fontSize="2.2rem">Nossos Serviços</Title>
             <Text>
-                Como parte da sua missão, a Ariella Boats & Services S.A.
-                oferece os seguintes serviços:
+                Como parte da sua missão, a Ariella Group S.A. oferece os
+                seguintes serviços:
             </Text>
             <Row
                 flexWrap

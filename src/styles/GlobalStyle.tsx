@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .fb_dialog_content{
         iframe:first-of-type{
-            bottom: 5rem !important;
+            bottom: 6rem !important;
             right: 0px !important;
         }
     }

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Column, Row, Title, Text } from "../styles"
-import Logo from "../assets/img/logo.png"
+import Logo from "../assets/img/logo.jpg"
 
 const Img = styled.img`
     width: 310px;
@@ -32,7 +32,7 @@ const Overview: React.FC = () => {
         <Column>
             <Row justifyContent="center">
                 <span />
-                <Title fontSize="2rem">ARIELLA BOATS & SERVICES S.A.</Title>
+                <Title fontSize="2rem">ARIELLA GROUP S.A.</Title>
             </Row>
             <Row justifyContent="center">
                 <Column style={{ maxWidth: "600px" }}>

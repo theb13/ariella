@@ -119,16 +119,16 @@ const Form: React.FC = () => {
                             <EmailIcon style={{ color: "#164B94" }} />
                             <div className="body">
                                 <h5>Email</h5>
-                                <a href="mailto:info@ariellaboats.com">
-                                    info@ariellaboats.com
+                                <a href="mailto:info@ariellagroup.co.mz">
+                                    info@ariellagroup.co.mz
                                 </a>
                                 <br />
-                                <a href="mailto:apoio@ariellaboats.com">
-                                    apoio@ariellaboats.com
+                                <a href="mailto:apoio@ariellagroup.co.mz">
+                                    apoio@ariellagroup.co.mz
                                 </a>
                                 <br />
-                                <a href="mailto:ariellaboats@gmail.com">
-                                    ariellaboats@gmail.com
+                                <a href="mailto:ariellagroupsa@gmail.com">
+                                    ariellagroupsa@gmail.com
                                 </a>
                                 <br />
                                 <br />
